@@ -51,7 +51,10 @@ export default function page() {
           scelte progettuali e risultati concreti.
         </Subtitle>
 
-        <div className="flex flex-col items-center mt-15 mb-50 gap-12">
+        <div className="flex flex-col relative items-center mt-15 mb-50 gap-20">
+          <div className="absolute top-0 h-full w-1 bg-primary -z-1 scale-105">
+            <div className="size-5 bg-primary rounded-full absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2"></div>
+          </div>
           <WorkCard>
             <WorkCard.Image />
             <WorkCard.Body>
