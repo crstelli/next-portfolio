@@ -29,8 +29,8 @@ export default function page() {
                 <Download />
                 Download my CV
               </Button>
-              <Button variant="icon">
-                <GitHub size={20} />
+              <Button variant="icon" size="sm" className="p-2.5">
+                <GitHub size={25} />
               </Button>
             </div>
           </div>
@@ -51,7 +51,7 @@ export default function page() {
           scelte progettuali e risultati concreti.
         </Subtitle>
 
-        <div className="flex flex-col relative items-center mt-15 mb-50 gap-20">
+        <div className="flex flex-col relative items-center mt-15 gap-12">
           <div className="absolute top-0 h-full w-0.5 bg-primary -z-1 scale-105">
             <div className="size-5 border-2 border-primary rounded-full absolute -bottom-2 translate-y-1/2 left-1/2 -translate-x-1/2"></div>
           </div>
@@ -121,6 +121,22 @@ export default function page() {
               </WorkCard.Description>
             </WorkCard.Body>
           </WorkCard>
+        </div>
+      </Section>
+      <Section className="mt-20">
+        <Title>Tech Stack</Title>
+        <Subtitle>
+          Gli strumenti che utilizzo ogni giorno per progettare e sviluppare
+          interfacce solide, performanti e mantenibili. Una selezione delle
+          tecnologie con cui lavoro in modo fluido e che uso per costruire
+          progetti scalabili e affidabili.
+        </Subtitle>
+        <div className="flex items-center justify-center mt-10">
+          <div className="border p-1 rounded-md border-neutral-900 bg-neutral-950">
+            <div className="relative aspect-square w-[40px]">
+              <Image src="techstack-logos/tailwindcss.svg" alt="logo" fill />
+            </div>
+          </div>
         </div>
       </Section>
     </>

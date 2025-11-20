@@ -24,7 +24,7 @@ function WorkCard({ children, invert = false }: Props) {
 
   return (
     <div
-      className={`max-w-[800px] grid border border-neutral-800 rounded-md overflow-hidden ${
+      className={`max-w-[700px] grid border hover:scale-102 duration-150 border-neutral-800 rounded-md overflow-hidden ${
         invert ? "grid-cols-[5fr_4fr] ml-30" : "grid-cols-[4fr_5fr] mr-30"
       }`}
     >
