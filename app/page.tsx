@@ -1,5 +1,5 @@
 import { Button } from "@/components/Button";
-import { GitHub } from "react-feather";
+import { Download, GitHub } from "react-feather";
 
 export default function page() {
   return (
@@ -18,8 +18,11 @@ export default function page() {
             in Next.js e Typescript, sviluppo interfacce veloci, accessibili e
             scalabili utilizzando tecnologie moderne.
           </p>
-          <div className="flex items-center gap-4 mt-4">
-            <Button size="lg">Download my CV</Button>
+          <div className="flex items-stretch gap-4 mt-4">
+            <Button className="flex items-center gap-2">
+              <Download />
+              Download my CV
+            </Button>
             <Button variant="icon">
               <GitHub size={20} />
             </Button>
