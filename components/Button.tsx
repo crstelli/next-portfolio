@@ -1,7 +1,9 @@
-interface Props {
-  children: string;
+import type { ReactNode } from "react";
 
-  variant?: "primary" | "secondary";
+interface Props {
+  children: string | ReactNode;
+
+  variant?: "primary" | "secondary" | "icon";
   size?: "sm" | "md" | "lg";
   className?: React.ComponentProps<"div">["className"];
 }
@@ -15,8 +17,9 @@ function Button({
   const base = "cursor-pointer rounded-md";
 
   const variants = {
-    primary: "text-black bg-primary font-bold",
+    primary: "text-black bg-primary hover:bg-primary-dark",
     secondary: "text-primary bg-black",
+    icon: "aspect-square flex items-center justify-center border border-neutral-800",
   };
 
   const sizes = {

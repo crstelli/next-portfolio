@@ -2,12 +2,13 @@
 
 @theme {
   --color-primary: #94d82d;
+  --color-primary-dark: #74b816;
 }
 
 .bg-grid {
   background-image: linear-gradient(rgba(31, 31, 31, 0.3) 1px, transparent 1px),
     linear-gradient(90deg, rgba(31, 31, 31, 0.3) 1px, transparent 1px);
-  background-size: 20px 20px;
+  background-size: 25px 25px;
 
   -webkit-mask-image: radial-gradient(
     circle,
