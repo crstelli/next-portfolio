@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import { Navbar } from "@/components/navbar/Navbar";
 import type { Metadata } from "next";
 
 import { Inter } from "next/font/google";
@@ -20,7 +21,8 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={`${inter.variable}`}>
-      <body className="min-h-screen w-full bg-black text-gray-300">
+      <body className="min-h-screen w-full justify-items-center grid grid-rows-[auto_1fr] bg-black text-gray-300">
+        <Navbar />
         {children}
       </body>
     </html>

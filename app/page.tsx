@@ -3,7 +3,7 @@ import { GitHub } from "react-feather";
 
 export default function page() {
   return (
-    <main className="h-screen w-screen flex flex-col items-center justify-center">
+    <main className="h-full w-full flex flex-col items-center justify-center">
       <div className="w-full h-full bg-grid absolute top-0 left-0 -z-1"></div>
       <div className="grid grid-cols-2 w-full max-w-[1150px]">
         <div className="flex flex-col gap-2">
