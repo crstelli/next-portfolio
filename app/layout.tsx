@@ -21,7 +21,7 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={`${inter.variable} ${firacode.variable}`}>
-      <body className="min-h-screen w-full">{children}</body>
+      <body className="min-h-screen w-full bg-grid">{children}</body>
     </html>
   );
 }
