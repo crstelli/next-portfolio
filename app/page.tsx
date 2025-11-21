@@ -5,7 +5,7 @@ import { TechStackCard } from "@/components/TechStackCard";
 import { Title } from "@/components/Title";
 import { WorkCard } from "@/components/workCard/WorkCard";
 import Image from "next/image";
-import { Download, GitHub, User } from "react-feather";
+import { Download, GitHub, Navigation, User } from "react-feather";
 
 export default function page() {
   return (
@@ -210,7 +210,7 @@ export default function page() {
           />
         </div>
       </Section>
-      <Section className="mt-20 mb-100">
+      <Section className="mt-20">
         <Title>About Me</Title>
         <Subtitle>Descrizione in inglese</Subtitle>
         <div className="grid grid-cols-2 items-center mt-10">
@@ -250,6 +250,16 @@ export default function page() {
             </p>
             <Button className="mt-4 self-end">Keep reading &rarr;</Button>
           </div>
+        </div>
+      </Section>
+      <Section className="mt-20 flex flex-col mb-400">
+        <Title>Contact me</Title>
+
+        <div className="self-center hover:scale-120 duration-150 mt-15">
+          <button className="glowing-border bg-primary text-black hover:bg-black hover:text-primary px-5 py-2.5 uppercase flex items-center gap-3 cursor-pointer text-xl">
+            <Navigation strokeWidth={2.5} />
+            Get in touch
+          </button>
         </div>
       </Section>
     </>

@@ -21,3 +21,51 @@
   );
   mask-image: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
+
+.glowing-border {
+  position: relative;
+  border-radius: 6px;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.glowing-border:hover::after,
+.glowing-border:hover::before {
+  --angle: 0deg;
+  content: "";
+  position: absolute;
+  border-radius: 6px;
+
+  background-image: conic-gradient(from var(--angle), transparent 50%, #94d82d);
+
+  height: 100%;
+  width: 100%;
+
+  top: 50%;
+  left: 50%;
+
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 27px 113px;
+
+  animation: 3s spinner linear infinite;
+}
+
+.glowing-border::before {
+  filter: blur(20px);
+  opacity: 0.75;
+}
+
+@keyframes spinner {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
