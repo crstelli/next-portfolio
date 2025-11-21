@@ -15,7 +15,7 @@ export default function page() {
               src="/shoppy-website/preview.png"
               alt="Preview image of shoppy website"
             />
-            <WorkCard.Body>
+            <WorkCard.Body page={"shoppy-website"}>
               <WorkCard.Header tag="Full Stack" year={2025} />
               <WorkCard.Title>Shoppy - Website</WorkCard.Title>
               <WorkCard.Description>
@@ -46,7 +46,7 @@ export default function page() {
               src="/shoppy-dashboard/preview.png"
               alt="Preview image of Shoppy dashboard"
             />
-            <WorkCard.Body>
+            <WorkCard.Body page={"shoppy-dashboard"}>
               <WorkCard.Header tag="Full Stack" year={2025} />
               <WorkCard.Title>Shoppy - Dashboard</WorkCard.Title>
               <WorkCard.Description>
@@ -78,7 +78,7 @@ export default function page() {
               src="/lumina-tech/preview.png"
               alt="Preview image of Lumina Tech website"
             />
-            <WorkCard.Body>
+            <WorkCard.Body page={"lumina-tech"}>
               <WorkCard.Header tag="Frontend" year={2025} />
               <WorkCard.Title>Lumina Tech</WorkCard.Title>
               <WorkCard.Description>
@@ -112,7 +112,7 @@ export default function page() {
               src="/food-truck/preview.png"
               alt="Preview image of Shoppy dashboard"
             />
-            <WorkCard.Body>
+            <WorkCard.Body page={"food-truck"}>
               <WorkCard.Header tag="Full Stack" year={2025} />
               <WorkCard.Title>Food Truck</WorkCard.Title>
               <WorkCard.Description>
