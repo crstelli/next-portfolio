@@ -222,7 +222,7 @@ export default function page() {
             playsInline
             className="w-full max-w-[320px] mx-auto"
           />
-          <div className="mt-20 flex flex-col">
+          <div className="mt-15 flex flex-col">
             <span className="mt-4 flex items-center gap-3">
               <User className="text-primary" size={30} />
               <h3 className="text-3xl font-bold text-white">Giuseppe</h3>
@@ -241,6 +241,12 @@ export default function page() {
                 dedication
               </span>{" "}
               and <span className="font-bold text-white">discipline</span>.
+              <br />
+              <br />
+              Passionate about web development, I want to contribute to
+              real-world projects and grow as a{" "}
+              <span className="font-bold text-white">Full-Stack Developer</span>
+              .
             </p>
             <Button className="mt-4 self-end">Keep reading &rarr;</Button>
           </div>
