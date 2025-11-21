@@ -264,7 +264,7 @@ export default function page() {
         <Title>Contact me</Title>
         <Subtitle>Descrizione in inglese</Subtitle>
         <div className="self-center hover:scale-120 duration-150 mt-15">
-          <button className="glowing-border bg-primary text-black hover:bg-black hover:text-primary px-5 py-2.5 uppercase flex items-center gap-3 cursor-pointer text-xl">
+          <button className="glowing-border bg-primary text-black hover:bg-neutral-950 hover:text-primary px-5 py-2.5 uppercase flex items-center gap-3 cursor-pointer text-xl">
             <Navigation strokeWidth={2.5} />
             Get in touch
           </button>
@@ -295,7 +295,9 @@ export default function page() {
                 rows={5}
               />
             </div>
-            <Button className="mt-4">Send Message</Button>
+            <button className="mt-4 px-4 py-1 border border-primary rounded-md cursor-pointer">
+              Send Message
+            </button>
           </form>
           <div className="bg-neutral-950 border border-neutral-800 flex flex-col items-start rounded-md p-4">
             <h4 className="text-lg font-medium text-white">
