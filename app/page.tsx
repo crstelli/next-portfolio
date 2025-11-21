@@ -3,7 +3,7 @@ import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
 import { TechStackCard } from "@/components/TechStackCard";
 import { Title } from "@/components/Title";
-import { WorkCard } from "@/components/workCard/WorkCard";
+import { WorkCard } from "@/components/workPreviewCard/WorkCard";
 import Image from "next/image";
 import {
   Download,
