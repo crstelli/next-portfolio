@@ -3,7 +3,9 @@ import type { Project } from "./type";
 export const project1: Project = {
   slug: "shoppy-website",
   stack: "Full Stack",
-  date: 2025,
+  date: { year: 2025, month: "November" },
+  worked_for: "5 days",
+  hosted_on: "Vercel",
   name: "Shoppy Website",
   description:
     "Shoppy is a modern e-commerce platform where users can order a variety of digital and physical products, filter them by price and status, and track their orders.",
@@ -22,6 +24,7 @@ export const project1: Project = {
   ],
   features: ["Responsive Design", "Login with Google", "Order Tracking"],
   github: "https://github.com/crstelli/shoppy-website",
+  live_view: "https://shoppy-online-store.vercel.app/",
   images: [
     "/shoppy-website/preview.png",
     "/shoppy-website/image-1.png",

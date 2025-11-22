@@ -3,7 +3,9 @@ import type { Project } from "./type";
 export const project4: Project = {
   slug: "food-truck",
   stack: "Full Stack",
-  date: 2025,
+  date: { year: 2025, month: "October" },
+  worked_for: "4 days",
+  hosted_on: "Vercel",
   name: "Shoppy Website",
   description:
     "Shoppy is a modern e-commerce platform where users can order a variety of digital and physical products, filter them by price and status, and track their orders.",
@@ -22,6 +24,7 @@ export const project4: Project = {
   ],
   features: ["Responsive Design", "Login with Google", "Order Tracking"],
   github: "https://github.com/crstelli/food-truck",
+  live_view: "https://crstelli-foodtruck.vercel.app/",
   images: [
     "/food-truck/preview.png",
     "/food-truck/image-1.png",

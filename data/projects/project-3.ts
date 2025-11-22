@@ -2,8 +2,10 @@ import type { Project } from "./type";
 
 export const project3: Project = {
   slug: "lumina-tech",
-  stack: "Full Stack",
-  date: 2025,
+  stack: "Frontend",
+  date: { year: 2025, month: "October" },
+  worked_for: "4 days",
+  hosted_on: "Vercel",
   name: "Shoppy Dashboard",
   description:
     "Shoppy is a modern e-commerce platform where users can order a variety of digital and physical products, filter them by price and status, and track their orders.",
@@ -22,6 +24,7 @@ export const project3: Project = {
   ],
   features: ["Responsive Design", "Login with Google", "Order Tracking"],
   github: "https://github.com/crstelli/lumina-tech",
+  live_view: "https://lumina-tech.netlify.app/",
   images: [
     "/lumina-tech/preview.png",
     "/lumina-tech/image-1.png",

@@ -15,6 +15,7 @@ import {
 } from "react-feather";
 import { ColorIcon } from "@/components/ColorIcon";
 import { Button } from "@/components/Button";
+import Link from "next/link";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -100,24 +101,40 @@ export default async function page({ params }: Props) {
             <ColorIcon
               icon={Calendar}
               label="Built in"
-              content="October, 2025"
+              content={`${project.date.month}, ${project.date.year}`}
             />
 
-            <ColorIcon icon={Layers} label="Stack used" content="Full Stack" />
-            <ColorIcon icon={Clock} label="Worked on for" content="4 days" />
-            <ColorIcon icon={HardDrive} label="Hosted on" content="Vercel" />
+            <ColorIcon
+              icon={Layers}
+              label="Stack used"
+              content={project.stack}
+            />
+            <ColorIcon
+              icon={Clock}
+              label="Worked on for"
+              content={project.worked_for}
+            />
+            <ColorIcon
+              icon={HardDrive}
+              label="Hosted on"
+              content={project.hosted_on}
+            />
           </div>
-          <Button className="flex items-center gap-2 w-full mt-10 justify-center">
-            <GitHub />
-            View GitHub Repository
-          </Button>
-          <Button
-            variant="secondary"
-            className="flex items-center gap-2 w-full justify-center"
-          >
-            <Radio />
-            Live View
-          </Button>
+          <Link target="blank" href={project.github} className="w-full">
+            <Button className="flex items-center gap-2 w-full mt-10 justify-center">
+              <GitHub />
+              View GitHub Repository
+            </Button>
+          </Link>
+          <Link target="blank" href={project.live_view} className="w-full">
+            <Button
+              variant="secondary"
+              className="flex items-center gap-2 w-full justify-center"
+            >
+              <Radio />
+              Live View
+            </Button>
+          </Link>
         </div>
       </Section>
     </main>

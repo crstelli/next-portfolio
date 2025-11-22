@@ -3,7 +3,9 @@ import type { Project } from "./type";
 export const project2: Project = {
   slug: "shoppy-dashboard",
   stack: "Full Stack",
-  date: 2025,
+  date: { year: 2025, month: "October" },
+  worked_for: "4 days",
+  hosted_on: "Vercel",
   name: "Shoppy Dashboard",
   description:
     "Shoppy is a modern e-commerce platform where users can order a variety of digital and physical products, filter them by price and status, and track their orders.",
@@ -22,6 +24,7 @@ export const project2: Project = {
   ],
   features: ["Responsive Design", "Login with Google", "Order Tracking"],
   github: "https://github.com/crstelli/shoppy-dashboard",
+  live_view: "https://db-shoppy.netlify.app/",
   images: [
     "/shoppy-dashboard/preview.png",
     "/shoppy-dashboard/image-1.png",

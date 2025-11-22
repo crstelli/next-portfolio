@@ -1,12 +1,18 @@
 export interface Project {
   slug: string;
   stack: "Full Stack" | "Frontend" | "Backend";
-  date: number;
+  date: {
+    year: number;
+    month: string;
+  };
+  worked_for: string;
+  hosted_on: "Vercel" | "Netlify" | "Custom";
   name: string;
   description: string;
   technologies: string[];
   features: string[];
   github: string;
+  live_view: string;
   images: string[];
 
   overview: string;
