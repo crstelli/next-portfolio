@@ -1,29 +1,64 @@
+"use client";
+import { useForm } from "react-hook-form";
+
 import { links } from "@/data/links";
 import { GitHub, Linkedin, Mail, MapPin } from "react-feather";
+import toast from "react-hot-toast";
+import { FormData } from "./EmailTemplate";
 
 function ContactInfo() {
+  const {
+    register,
+    handleSubmit,
+    // formState: { errors, isSubmitting },
+    reset,
+  } = useForm<FormData>();
+
+  async function onSubmit(data: FormData) {
+    const res = await fetch("api/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) {
+      toast.error("Error on form submission.");
+    }
+
+    toast.success("Email Sent");
+
+    reset();
+  }
+
   return (
     <div className="flex flex-col mx-auto max-w-[600px] lg:max-w-none lg:grid grid-cols-[3fr_2fr] grid-rows-[1fr-auto] mt-10 gap-10">
-      <form className="bg-neutral-950 row-span-2 border border-neutral-800 rounded-md p-4">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="bg-neutral-950 row-span-2 border border-neutral-800 rounded-md p-4"
+      >
         <h4 className="text-lg font-medium text-white">Send a message</h4>
         <div className="grid grid-cols-2 mt-4 gap-4">
           <input
+            {...register("fullName", { required: true })}
             type="text"
             placeholder="Full Name"
             className="bg-neutral-900 col-span-2 px-4 py-2 rounded-md"
           />
           <input
+            {...register("email", { required: true })}
             type="email"
             placeholder="Email"
             className="bg-neutral-900 px-4 max-[350px]:col-span-2 py-2 rounded-md"
           />
           <input
-            type="text"
+            {...register("phone")}
+            type="number"
             placeholder="Phone Number (optional)"
             className="bg-neutral-900 px-4 max-[350px]:col-span-2 py-2 rounded-md"
           />
 
           <textarea
+            {...register("message", { required: true })}
             className="bg-neutral-900 px-4 py-2 rounded-md col-span-2 resize-none"
             placeholder="Message"
             rows={5}

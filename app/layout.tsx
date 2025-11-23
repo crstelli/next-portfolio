@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar/Navbar";
 import type { Metadata } from "next";
 
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={`${inter.variable}`}>
       <body className="min-h-screen w-full justify-items-center flex flex-col bg-black text-gray-300">
+        <Toaster />
         <Navbar />
         {children}
         <Footer />
