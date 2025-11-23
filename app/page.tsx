@@ -17,7 +17,7 @@ export default function page() {
     <>
       <main className="h-full w-full flex flex-col items-center justify-center">
         <div className="w-full h-screen bg-grid absolute top-0 left-0 -z-1"></div>
-        <Section className="flex flex-col max-lg:justify-center lg:grid h-screen items-center grid-cols-2">
+        <Section className="flex flex-col max-lg:mt-20 lg:grid h-screen items-center grid-cols-2">
           <ChevronDown
             className="absolute bottom-10 left-1/2 -translate-x-1/2 chevron-down"
             size={50}

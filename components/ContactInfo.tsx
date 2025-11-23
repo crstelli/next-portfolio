@@ -15,12 +15,12 @@ function ContactInfo() {
           <input
             type="email"
             placeholder="Email"
-            className="bg-neutral-900 px-4 py-2 rounded-md"
+            className="bg-neutral-900 px-4 max-[350px]:col-span-2 py-2 rounded-md"
           />
           <input
             type="text"
             placeholder="Phone Number (optional)"
-            className="bg-neutral-900 px-4 py-2 rounded-md"
+            className="bg-neutral-900 px-4 max-[350px]:col-span-2 py-2 rounded-md"
           />
 
           <textarea
