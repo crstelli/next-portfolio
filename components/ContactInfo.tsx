@@ -1,0 +1,78 @@
+import { links } from "@/data/links";
+import { GitHub, Linkedin, Mail, MapPin } from "react-feather";
+
+function ContactInfo() {
+  return (
+    <div className="flex flex-col mx-auto max-w-[600px] lg:max-w-none lg:grid grid-cols-[3fr_2fr] grid-rows-[1fr-auto] mt-10 gap-10">
+      <form className="bg-neutral-950 row-span-2 border border-neutral-800 rounded-md p-4">
+        <h4 className="text-lg font-medium text-white">Send a message</h4>
+        <div className="grid grid-cols-2 mt-4 gap-4">
+          <input
+            type="text"
+            placeholder="Full Name"
+            className="bg-neutral-900 col-span-2 px-4 py-2 rounded-md"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="bg-neutral-900 px-4 py-2 rounded-md"
+          />
+          <input
+            type="text"
+            placeholder="Phone Number (optional)"
+            className="bg-neutral-900 px-4 py-2 rounded-md"
+          />
+
+          <textarea
+            className="bg-neutral-900 px-4 py-2 rounded-md col-span-2 resize-none"
+            placeholder="Message"
+            rows={5}
+          />
+        </div>
+        <button className="mt-4 px-4 py-1 border border-primary rounded-md cursor-pointer">
+          Send Message
+        </button>
+      </form>
+      <div className="bg-neutral-950 border border-neutral-800 flex flex-col items-start rounded-md p-4">
+        <h4 className="text-lg font-medium text-white">Contact Information</h4>
+
+        <span className="grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-4 mt-4">
+          <span className="bg-primary/10 p-2 row-span-2 rounded-md text-primary">
+            <Mail size={25} />
+          </span>
+          <h5 className="text-sm text-neutral-500 font-medium">Email</h5>
+          <a href={`mailto:${links.email}`}>{links.email}</a>
+        </span>
+
+        <span className="grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-4 mt-4">
+          <span className="bg-primary/10 p-2 row-span-2 rounded-md text-primary">
+            <MapPin size={25} />
+          </span>
+          <h5 className="text-sm text-neutral-500 font-medium">Location</h5>
+          <span>Naples, Italy IT</span>
+        </span>
+      </div>
+      <div className="bg-neutral-950 border border-neutral-800 flex flex-col items-start rounded-md p-4">
+        <h4 className="text-lg font-medium text-white">Connect with me</h4>
+        <div className="flex mt-4 gap-4">
+          <a
+            target="blank"
+            href={links.github}
+            className="p-2 bg-neutral-900 rounded-md"
+          >
+            <GitHub size={22} />
+          </a>
+          <a
+            target="blank"
+            href={links.linkedin}
+            className="p-2 bg-neutral-900 rounded-md"
+          >
+            <Linkedin size={22} />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export { ContactInfo };
