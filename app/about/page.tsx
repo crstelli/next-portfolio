@@ -8,6 +8,7 @@ import Link from "next/link";
 import { GitHub, Linkedin } from "react-feather";
 import { links } from "@/data/links";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
@@ -37,7 +38,14 @@ export default function page() {
           </h1>
           <div className="row-span-2 min-[900px]:sticky top-25 max-w-[500px] p-4 justify-self-center rounded-md border border-neutral-800 self-start bg-neutral-950">
             <div className="flex flex-col gap-3 items-center">
-              <div className="size-30 bg-primary rounded-full"></div>
+              <div className="size-30 rounded-full relative overflow-hidden">
+                <Image
+                  src="/pfp.jpg"
+                  alt="Profile picture of Giuseppe"
+                  className="object-center object-cover"
+                  fill
+                />
+              </div>
               <h3 className="font-bold text-xl min-[350px]:text-2xl">
                 Giuseppe Crescitelli
               </h3>
