@@ -30,11 +30,11 @@ export default async function page({ params }: Props) {
   const { default: Content } = await import(`@/projects/${project.slug}.mdx`);
 
   return (
-    <main className="mt-20 min-h-screen max-w-screen">
+    <main className="min-h-screen max-w-screen lg:mt-5">
       <Section>
         <Title>{project.name}</Title>
         <Subtitle>{project.description}</Subtitle>
-        <div className="grid grid-cols-3 gap-2 mt-15">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mt-15">
           {project.images.map((img) => (
             <Image
               src={img}
@@ -44,16 +44,16 @@ export default async function page({ params }: Props) {
           ))}
         </div>
       </Section>
-      <Section className="grid grid-cols-[5fr_3fr] grid-rows-[auto_auto_1fr] gap-8">
-        <div className="row-span-3">
+      <Section className="grid grid-cols-1 min-[880px]:grid-cols-2 min-[970px]:grid-cols-[5fr_4fr] min-[1135px]:grid-cols-[5fr_3fr] grid-rows-[auto_auto_1fr] gap-8">
+        <div className="min-[880px]:max-[970px]:col-span-2 row-span-3 p-2">
           <Content />
         </div>
-        <div className="bg-neutral-950 border flex flex-col items-start gap-3 self-start border-neutral-800 rounded-md p-4">
+        <div className="bg-neutral-950 max-w-[550px] w-full mx-auto border flex flex-col items-start gap-3 self-start border-neutral-800 rounded-md p-4">
           <h5 className="self-center text-center text-xl font-bold">
             {project.name}
           </h5>
           <div className="h-px w-full bg-neutral-700"></div>
-          <div className="mt-4 gap-3 grid grid-cols-2 w-full">
+          <div className="mt-4 gap-3 px-4 grid grid-cols-1 min-[450px]:grid-cols-2 w-full">
             <ColorIcon
               icon={Calendar}
               label="Built in"
@@ -93,7 +93,7 @@ export default async function page({ params }: Props) {
           </Link>
         </div>
 
-        <div className="bg-neutral-950 border flex flex-col gap-4 self-start border-neutral-800 rounded-md p-4">
+        <div className="bg-neutral-950 max-w-[550px] w-full mx-auto border flex flex-col gap-4 self-start border-neutral-800 rounded-md p-4">
           <h5 className="text-xl font-bold">Tech Stack</h5>
           {project.technologies.map((tech) => (
             <TechStackCard
