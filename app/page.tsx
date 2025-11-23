@@ -147,7 +147,9 @@ export default function page() {
               <span className="font-bold text-white">Full-Stack Developer</span>
               .
             </p>
-            <Button className="mt-4 self-end">Keep reading &rarr;</Button>
+            <Link href={"/about"} className="mt-4 self-end">
+              <Button>Keep reading &rarr;</Button>
+            </Link>
           </div>
         </div>
       </Section>
@@ -156,12 +158,15 @@ export default function page() {
         <Subtitle>
           Get in touch to discuss projects, collaborations, or opportunities.
         </Subtitle>
-        <div className="self-center hover:scale-120 duration-150 mt-15">
+        <Link
+          href={"/contact"}
+          className="self-center hover:scale-120 duration-150 mt-15"
+        >
           <button className="glowing-border bg-primary text-black hover:bg-neutral-950 hover:text-primary px-5 py-2.5 uppercase flex items-center gap-3 cursor-pointer text-xl">
             <Navigation strokeWidth={2.5} />
             Get in touch
           </button>
-        </div>
+        </Link>
         <div className="grid grid-cols-[3fr_2fr] grid-rows-[1fr-auto] mt-10 gap-10">
           <form className="bg-neutral-950 row-span-2 border border-neutral-800 rounded-md p-4">
             <h4 className="text-lg font-medium text-white">Send a message</h4>
@@ -202,7 +207,7 @@ export default function page() {
                 <Mail size={25} />
               </span>
               <h5 className="text-sm text-neutral-500 font-medium">Email</h5>
-              <span>contact@crescitelli.dev</span>
+              <a href={`mailto:${links.email}`}>{links.email}</a>
             </span>
 
             <span className="grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-4 mt-4">
@@ -216,12 +221,20 @@ export default function page() {
           <div className="bg-neutral-950 border border-neutral-800 flex flex-col items-start rounded-md p-4">
             <h4 className="text-lg font-medium text-white">Connect with me</h4>
             <div className="flex mt-auto gap-4">
-              <span className="p-2 bg-neutral-900 rounded-md">
+              <a
+                target="blank"
+                href={links.github}
+                className="p-2 bg-neutral-900 rounded-md"
+              >
                 <GitHub size={22} />
-              </span>
-              <span className="p-2 bg-neutral-900 rounded-md">
+              </a>
+              <a
+                target="blank"
+                href={links.linkedin}
+                className="p-2 bg-neutral-900 rounded-md"
+              >
                 <Linkedin size={22} />
-              </span>
+              </a>
             </div>
           </div>
         </div>
