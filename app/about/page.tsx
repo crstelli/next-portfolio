@@ -24,11 +24,11 @@ export default function page() {
           provides context on how I tackle challenges, collaborate within teams,
           and continue growing in a fast-evolving industry.
         </Subtitle>
-        <div className="mt-20 grid grid-cols-2 gap-x-20">
-          <h1 className="text-4xl ml-4 font-bold text-white">
+        <div className="mt-20 grid grid-cols-1 min-[900px]:grid-cols-2 gap-x-10">
+          <h1 className="text-4xl max-[900px]:order-1 ml-4 max-[900px]:mt-15 font-bold text-white">
             Meet <span className="text-primary">Giuseppe</span>
           </h1>
-          <div className="row-span-2 sticky top-40 w-[80%] p-4 justify-self-center rounded-md border border-neutral-800 self-start bg-neutral-950">
+          <div className="row-span-2 min-[900px]:sticky top-25 max-w-[500px] p-4 justify-self-center rounded-md border border-neutral-800 self-start bg-neutral-950">
             <div className="flex flex-col gap-3 items-center">
               <div className="size-30 bg-primary rounded-full"></div>
               <h3 className="font-bold text-2xl">Giuseppe Crescitelli</h3>
@@ -65,7 +65,7 @@ export default function page() {
               </Button>
             </Link>
           </div>
-          <div>
+          <div className="max-[900px]:order-1">
             <Content />
             <Link href={"/contact"}>
               <Button className="mt-4" size="lg">
