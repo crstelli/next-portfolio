@@ -1,16 +1,21 @@
 import type { ReactNode } from "react";
 import { Button } from "../Button";
+import Link from "next/link";
 
 interface Props {
   children: ReactNode;
+  link: string;
+
   invert?: boolean;
 }
 
-function Body({ children }: Props) {
+function Body({ children, link }: Props) {
   return (
     <div className="bg-neutral-950 p-4 flex flex-col gap-2">
       {children}
-      <Button className="mt-auto self-start">Explore</Button>
+      <Link href={link} className="mt-auto self-start">
+        <Button>Explore</Button>
+      </Link>
     </div>
   );
 }

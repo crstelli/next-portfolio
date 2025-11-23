@@ -21,7 +21,7 @@ export default function page() {
             Meet <span className="text-primary">Giuseppe</span>
           </h1>
           <div className="row-span-2 w-[80%] justify-self-center rounded-md border border-neutral-800 aspect-square bg-neutral-950">
-            Placeholder
+            Placeholder Download my CV
             <p className="bg-neutral-950 text-sm p-3 rounded-md border border-neutral-900 italic">
               Self-taught frontend developer driven by modern technologies,{" "}
               <span className="text-primary">clean</span> and{" "}

@@ -4,7 +4,11 @@ import { Subtitle } from "@/components/Subtitle";
 import { TechStackCard } from "@/components/TechStackCard";
 import { Title } from "@/components/Title";
 import { WorkCard } from "@/components/workPreviewCard/WorkCard";
+import { links } from "@/data/links";
+import { projects } from "@/data/projects";
+import { techStack } from "@/data/techstack";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Download,
   GitHub,
@@ -29,18 +33,22 @@ export default function page() {
               Giuseppe Crescitelli
             </h1>
             <p>
-              Front-end Developer focalizzato su UX e performance, con
-              esperienza in Next.js e Typescript, sviluppo interfacce veloci,
-              accessibili e scalabili utilizzando tecnologie moderne.
+              Front-end Developer focused on UX and performance, with experience
+              in Next.js and TypeScript. I build fast, accessible, and scalable
+              interfaces using modern technologies.
             </p>
             <div className="flex items-stretch gap-4 mt-6">
-              <Button className="flex items-center gap-2">
-                <Download />
-                Download my CV
-              </Button>
-              <Button variant="icon" size="sm" className="p-2.5">
-                <GitHub size={25} />
-              </Button>
+              <a href={links.cv} download className="flex">
+                <Button className="flex items-center gap-2">
+                  <Download />
+                  Download my CV
+                </Button>
+              </a>
+              <Link target="blank" href={links.github}>
+                <Button variant="icon" size="sm" className="p-2.5">
+                  <GitHub size={25} />
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="flex justify-end">
@@ -54,173 +62,56 @@ export default function page() {
       <Section>
         <Title>My Works</Title>
         <Subtitle>
-          Mostro una selezione dei miei progetti più significativi, con
-          particolare attenzione a performance, UX e qualità del codice. Ogni
-          lavoro è accompagnato da una pagina dedicata con dettagli tecnici,
-          scelte progettuali e risultati concreti.
+          I showcase a selection of my most significant projects, with a focus
+          on performance, UX, and code quality. Each project includes a
+          dedicated page detailing technical aspects, design choices, and
+          tangible results.
         </Subtitle>
 
         <div className="flex flex-col relative items-center mt-15 gap-12">
           <div className="absolute top-0 h-full w-0.5 bg-primary -z-1 scale-105">
             <div className="size-5 border-2 border-primary rounded-full absolute -bottom-2 translate-y-1/2 left-1/2 -translate-x-1/2"></div>
           </div>
-          <WorkCard>
-            <WorkCard.Image
-              src="/shoppy-website/preview.png"
-              alt="Preview image of shoppy website app"
-              className="object-cover object-center"
-              fill
-            />
-            <WorkCard.Body>
-              <WorkCard.Title tag="Full Stack">Shoppy Website</WorkCard.Title>
-              <WorkCard.Description>
-                Shoppy is a modern e-commerce platform where users can order a
-                variety of digital and physical products, filter them by price
-                and status, and track their orders.
-              </WorkCard.Description>
-            </WorkCard.Body>
-          </WorkCard>
-
-          <WorkCard invert>
-            <WorkCard.Image
-              src="/shoppy-dashboard/preview.png"
-              alt="Preview image of shoppy dashboard app"
-              className="object-cover object-center"
-              fill
-            />
-            <WorkCard.Body>
-              <WorkCard.Title tag="Backend">Shoppy Dashboard</WorkCard.Title>
-              <WorkCard.Description>
-                A modern dashboard for Shoppy Website owners to manage products,
-                orders, and sales metrics efficiently.
-              </WorkCard.Description>
-            </WorkCard.Body>
-          </WorkCard>
-
-          <WorkCard>
-            <WorkCard.Image
-              src="/food-truck/preview.png"
-              alt="Preview image of Food Truck app"
-              className="object-cover object-center"
-              fill
-            />
-            <WorkCard.Body>
-              <WorkCard.Title tag="Full Stack">Food Truck</WorkCard.Title>
-              <WorkCard.Description>
-                Web application for tracking food trucks around the world. You
-                can add new trucks, view their location and details through
-                Google Maps integration, and read other user reviews.
-              </WorkCard.Description>
-            </WorkCard.Body>
-          </WorkCard>
-
-          <WorkCard invert>
-            <WorkCard.Image
-              src="/lumina-tech/preview.png"
-              alt="Preview image of Food Truck app"
-              className="object-cover object-center"
-              fill
-            />
-            <WorkCard.Body>
-              <WorkCard.Title tag="Frontend">Lumina Tech</WorkCard.Title>
-              <WorkCard.Description>
-                Web application for tracking food trucks around the world. You
-                can add new trucks, view their location and details through
-                Google Maps integration, and read other user reviews.
-              </WorkCard.Description>
-            </WorkCard.Body>
-          </WorkCard>
+          {projects.map((p, i) => (
+            <WorkCard key={p.id} invert={i % 2 === 1}>
+              <WorkCard.Image
+                src={p.images[0]}
+                alt={`Preview image of ${p.name}.`}
+                className="object-cover object-center"
+                fill
+              ></WorkCard.Image>
+              <WorkCard.Body link={`/works/${p.slug}`}>
+                <WorkCard.Title tag={p.stack}>{p.name}</WorkCard.Title>
+                <WorkCard.Description>{p.description}</WorkCard.Description>
+              </WorkCard.Body>
+            </WorkCard>
+          ))}
         </div>
       </Section>
       <Section className="mt-20">
         <Title>Tech Stack</Title>
         <Subtitle>
-          Gli strumenti che utilizzo ogni giorno per progettare e sviluppare
-          interfacce solide, performanti e mantenibili. Una selezione delle
-          tecnologie con cui lavoro in modo fluido e che uso per costruire
-          progetti scalabili e affidabili.
+          The tools I use daily to design and develop robust, high-performance,
+          and maintainable interfaces. A selection of technologies I work with
+          seamlessly to build scalable and reliable projects.
         </Subtitle>
         <div className="grid grid-cols-3 auto-rows-[1fr] justify-center gap-4 mt-10">
-          <TechStackCard
-            image={"/techstack-logos/tailwindcss.svg"}
-            label="TailwindCSS"
-            content="Utility-first CSS framework I use to build modern, responsive interfaces efficiently."
-          />
-          <TechStackCard
-            image={"/techstack-logos/nextjs.svg"}
-            label="NextJS"
-            content="My go-to full-stack framework for building fast, scalable web applications."
-          />
-          <TechStackCard
-            image={"/techstack-logos/react.svg"}
-            label="React"
-            content="The core library I rely on to create dynamic, component-driven UIs."
-          />
-          <TechStackCard
-            image={"/techstack-logos/vscode.svg"}
-            label="Visual Studio Code"
-            content="My primary development environment, customized for a fast and focused workflow."
-          />
-          <TechStackCard
-            image={"/techstack-logos/supabase.svg"}
-            label="Supabase"
-            content="Backend platform I use for authentication, databases, and real-time features."
-          />
-          <TechStackCard
-            image={"/techstack-logos/typescript.svg"}
-            label="TypeScript"
-            content="My preferred way to write safer, predictable JavaScript at scale."
-          />
-          <TechStackCard
-            image={"/techstack-logos/git.svg"}
-            label="Git"
-            content="Version control system I use to track changes and collaborate effectively."
-          />
-          <TechStackCard
-            image={"/techstack-logos/github.svg"}
-            label="GitHub"
-            content="The platform where I manage repositories, issues, and project workflows."
-          />
-          <TechStackCard
-            image={"/techstack-logos/vercel.svg"}
-            label="Vercel"
-            content="My deployment platform for fast, reliable builds and previews."
-          />
-          <TechStackCard
-            image={"/techstack-logos/netlify.svg"}
-            label="Netlify"
-            content="A flexible hosting platform I use for static deployments and quick prototypes."
-          />
-          <TechStackCard
-            image={"/techstack-logos/prettier.svg"}
-            label="Prettier"
-            content="Formatter I use to enforce consistent code style across all projects."
-          />
-          <TechStackCard
-            image={"/techstack-logos/eslint.svg"}
-            label="ESLint"
-            content="Tooling I use to detect issues early and maintain clean, reliable code."
-          />
-          <TechStackCard
-            image={"/techstack-logos/npm.svg"}
-            label="NPM"
-            content="Package manager I rely on to install and manage project dependencies."
-          />
-          <TechStackCard
-            image={"/techstack-logos/shadcn.svg"}
-            label="Shadcn/UI"
-            content="Component system I use to build accessible, customizable interfaces."
-          />
-          <TechStackCard
-            image={"/techstack-logos/nodejs.svg"}
-            label="NodeJS"
-            content="Runtime I use to build server-side logic and run JavaScript outside the browser."
-          />
+          {techStack.map((ts) => (
+            <TechStackCard
+              key={ts.label}
+              image={ts.image}
+              label={ts.label}
+              content={ts.content}
+            />
+          ))}
         </div>
       </Section>
       <Section className="mt-20">
         <Title>About Me</Title>
-        <Subtitle>Descrizione in inglese</Subtitle>
+        <Subtitle>
+          Learn more about me, my skills, and my approach to creating impactful
+          digital experiences.
+        </Subtitle>
         <div className="grid grid-cols-2 items-center mt-10">
           <video
             src="/animation.webm"
@@ -262,7 +153,9 @@ export default function page() {
       </Section>
       <Section className="mt-20 flex flex-col">
         <Title>Contact me</Title>
-        <Subtitle>Descrizione in inglese</Subtitle>
+        <Subtitle>
+          Get in touch to discuss projects, collaborations, or opportunities.
+        </Subtitle>
         <div className="self-center hover:scale-120 duration-150 mt-15">
           <button className="glowing-border bg-primary text-black hover:bg-neutral-950 hover:text-primary px-5 py-2.5 uppercase flex items-center gap-3 cursor-pointer text-xl">
             <Navigation strokeWidth={2.5} />
