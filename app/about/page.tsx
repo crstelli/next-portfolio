@@ -43,6 +43,7 @@ export default function page() {
                   src="/pfp.jpg"
                   alt="Profile picture of Giuseppe"
                   className="object-center object-cover"
+                  sizes="120px"
                   fill
                 />
               </div>

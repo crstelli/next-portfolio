@@ -21,6 +21,7 @@ function TechStackCard({ label, image, content }: Props) {
             src={image || "/techstack-logos/placeholder.svg"}
             alt={`Logo of ${label}`}
             className="object-contain object-center"
+            sizes="36px"
             fill
           />
         </div>

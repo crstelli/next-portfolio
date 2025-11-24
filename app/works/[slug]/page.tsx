@@ -165,6 +165,7 @@ export default async function page({ params }: Props) {
               <Image
                 src={nextProject.images[0]}
                 alt={`Preview image of ${nextProject.name}.`}
+                sizes="200px"
                 fill
               />
             </div>

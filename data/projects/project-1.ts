@@ -81,7 +81,7 @@ export const project1: Project = {
   github: "https://github.com/crstelli/shoppy-website",
   live_view: "https://shoppy-online-store.vercel.app/",
   images: [
-    "/shoppy-website/preview.png",
+    "/shoppy-website/preview.jpg",
     "/shoppy-website/image-1.png",
     "/shoppy-website/image-2.png",
     "/shoppy-website/image-3.png",

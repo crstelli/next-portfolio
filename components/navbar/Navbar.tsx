@@ -10,6 +10,7 @@ function Navbar() {
           src="/logo.png"
           alt="Logo"
           className="object-cover object-center"
+          sizes="200px"
           fill
         />
       </Link>

@@ -93,7 +93,7 @@ export const project4: Project = {
   github: "https://github.com/crstelli/food-truck",
   live_view: "https://crstelli-foodtruck.vercel.app/",
   images: [
-    "/food-truck/preview.png",
+    "/food-truck/preview.jpg",
     "/food-truck/image-1.png",
     "/food-truck/image-2.png",
     "/food-truck/image-3.png",

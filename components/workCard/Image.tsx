@@ -11,6 +11,7 @@ function Image({ src, alt }: Props) {
       <NextImage
         src={src}
         alt={alt}
+        sizes="(max-width: 450px) 100vw, 500px"
         className="object-cover object-top rounded-t-md"
         fill
       />

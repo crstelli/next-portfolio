@@ -58,7 +58,12 @@ export default function page() {
             </div>
           </div>
           <div className="max-lg:hidden relative justify-self-end lg:max-w-[320px] w-full aspect-square">
-            <Image src="/hero.svg" alt="Hero image" fill />
+            <Image
+              src="/hero.svg"
+              sizes="(max-width:1024px) 0px, 320px"
+              alt="Hero image"
+              fill
+            />
           </div>
           <div className="absolute top-40 right-20 w-[400px] h-[400px] bg-primary/10 lg:bg-primary/20 blur-[120px] rounded-full"></div>
         </Section>
@@ -82,6 +87,8 @@ export default function page() {
                 src={p.images[0]}
                 alt={`Preview image of ${p.name}.`}
                 className="object-cover object-center"
+                quality={50}
+                sizes="(max-width: 355px): 100vw, 355px"
                 fill
               ></WorkCard.Image>
               <WorkCard.Body link={`/works/${p.slug}`}>
