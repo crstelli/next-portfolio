@@ -22,6 +22,7 @@ function ScrollButton() {
 
   return (
     <Button
+      variant="secondary"
       onClick={scrollToTop}
       className={`sticky self-end bottom-15 right-15 duration-300 ${isVisible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
     >

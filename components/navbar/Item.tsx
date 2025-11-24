@@ -17,7 +17,9 @@ function Item({ children, customRef }: Props) {
     (pathname !== "/" && ref !== "/" && pathname.includes(ref));
 
   return (
-    <li className={`${isActive ? "text-primary" : ""}`}>
+    <li
+      className={`${isActive ? "text-primary" : "hover:text-neutral-400 duration-300"}`}
+    >
       <Link href={ref}>{children}</Link>
     </li>
   );
