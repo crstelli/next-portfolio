@@ -61,7 +61,7 @@ export default async function page({ params }: Props) {
   return (
     <main className="min-h-screen max-w-screen">
       <Section className="relative">
-        <Link href={"/works"}>
+        <Link href={"/works"} className="max-[640px]:hidden">
           <Button className="absolute max-sm:top-35 top-25 flex items-center gap-2 left-3">
             <ArrowLeft /> Works
           </Button>
@@ -75,7 +75,7 @@ export default async function page({ params }: Props) {
         </Gallery>
       </Section>
       <Section className="grid pt-0! grid-cols-1 min-[940px]:grid-cols-2 min-[1050px]:grid-cols-[5fr_4fr] min-[1150px]:grid-cols-[3fr_2fr] grid-rows-[auto_auto_1fr] gap-8">
-        <div className="min-[940px]:max-[1050px]:col-span-2 row-span-3 p-2">
+        <div className="min-[940px]:max-[1050px]:col-span-2 row-span-3 max-sm:px-4">
           <Content />
         </div>
         <div className="bg-neutral-950 max-w-[550px] w-full mx-auto border flex flex-col items-start gap-3 self-start border-neutral-800 rounded-md p-4">
