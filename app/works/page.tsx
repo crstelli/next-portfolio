@@ -33,7 +33,7 @@ export default function page() {
           {projects.map((p) => (
             <WorkCard key={p.id}>
               <WorkCard.Image
-                src={`/${p.slug}/preview.png`}
+                src={p.images[0]}
                 alt={`Preview image of ${p.name}`}
               />
               <WorkCard.Body>
