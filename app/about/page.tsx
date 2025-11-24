@@ -5,7 +5,7 @@ import { Title } from "@/components/Title";
 import Content from "./content.mdx";
 import { Button } from "@/components/Button";
 import Link from "next/link";
-import { GitHub, Linkedin } from "react-feather";
+import { GitHub, Linkedin, MousePointer } from "react-feather";
 import { links } from "@/data/links";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -58,7 +58,8 @@ export default function page() {
               <span className="text-primary">learn</span>, and succeed.
             </p>
             <Link href={"/contact"}>
-              <Button className="w-full mt-10 py-2 text-lg">
+              <Button className="w-full mt-10 flex gap-2 items-center justify-center py-2 text-lg">
+                <MousePointer />
                 Get in Touch
               </Button>
             </Link>
@@ -85,8 +86,9 @@ export default function page() {
           <div className="max-[900px]:order-1">
             <Content />
             <Link href={"/contact"}>
-              <Button className="mt-4" size="lg">
-                Get in Touch &rarr;
+              <Button className="mt-4 flex items-center gap-2" size="lg">
+                <MousePointer />
+                Get in Touch
               </Button>
             </Link>
           </div>
