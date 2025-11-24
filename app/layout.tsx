@@ -1,7 +1,9 @@
 import "@/app/globals.css";
+
 import { ClickSound } from "@/components/ClickSound";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/navbar/Navbar";
+import { ScrollButton } from "@/components/ScrollButton";
 import type { Metadata } from "next";
 
 import { Inter } from "next/font/google";
@@ -23,11 +25,14 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" className={`${inter.variable}`}>
-      <body className="min-h-screen w-full justify-items-center flex flex-col bg-black text-gray-300">
-        <Toaster />
-        <ClickSound />
-        <Navbar />
-        {children}
+      <body className="w-full bg-black text-gray-300">
+        <div className="min-h-screen w-full relative justify-items-center flex flex-col">
+          <Toaster />
+          <ClickSound />
+          <Navbar />
+          {children}
+          <ScrollButton />
+        </div>
         <Footer />
       </body>
     </html>

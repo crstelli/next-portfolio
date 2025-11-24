@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 interface Props {
   children: string | ReactNode;
+  onClick?: () => void;
 
   variant?: "primary" | "secondary" | "icon";
   size?: "sm" | "md" | "lg";
@@ -13,6 +14,7 @@ function Button({
   size = "md",
   className,
   children,
+  onClick,
 }: Props) {
   const base = "cursor-pointer rounded-md";
 
@@ -30,6 +32,7 @@ function Button({
 
   return (
     <button
+      onClick={onClick}
       className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
     >
       {children}
