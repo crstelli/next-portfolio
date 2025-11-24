@@ -5,6 +5,7 @@ import { links } from "@/data/links";
 import { GitHub, Linkedin, Mail, MapPin } from "react-feather";
 import toast from "react-hot-toast";
 import { FormData } from "./EmailTemplate";
+import { Button } from "./Button";
 
 function ContactInfo() {
   const {
@@ -64,9 +65,12 @@ function ContactInfo() {
             rows={5}
           />
         </div>
-        <button className="mt-4 px-4 py-1 border border-primary rounded-md cursor-pointer">
+        {/* <button className="mt-4 px-4 py-1 border border-primary rounded-md cursor-pointer">
           Send Message
-        </button>
+        </button> */}
+        <Button variant="secondary" className="mt-4">
+          Send Message
+        </Button>
       </form>
       <div className="bg-neutral-950 border border-neutral-800 flex flex-col items-start rounded-md p-4">
         <h4 className="text-lg font-medium text-white">Contact Information</h4>
