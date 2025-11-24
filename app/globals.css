@@ -10,7 +10,8 @@
 }
 
 .bg-grid {
-  background-image: linear-gradient(rgba(31, 31, 31, 0.3) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(31, 31, 31, 0.3) 1px, transparent 1px),
     linear-gradient(90deg, rgba(31, 31, 31, 0.3) 1px, transparent 1px);
   background-size: 25px 25px;
 
@@ -85,5 +86,23 @@
 
   100% {
     transform: translateY(20px);
+  }
+}
+
+@layer utilities {
+  *::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  *::-webkit-scrollbar-track {
+    @apply rounded-full bg-black;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-primary;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/90;
   }
 }
