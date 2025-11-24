@@ -4,5 +4,5 @@ export const links = {
   linkedin: "https://www.linkedin.com/in/giuseppecrescitelli/",
   email: "contact@crescitelli.dev",
 
-  cv: "/Giuseppe Crescitelli.pdf",
+  cv: "/Giuseppe_Crescitelli_Frontend.pdf",
 };
