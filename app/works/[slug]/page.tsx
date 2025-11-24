@@ -50,7 +50,22 @@ export default async function page({ params }: Props) {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
 
-  if (!project) return <div>404 - Project Not Found</div>;
+  if (!project)
+    return (
+      <div className="m-auto text-center">
+        <h1 className="text-6xl text-primary italic">OPS!</h1>
+        <p className="text-3xl mt-4">This project does not exists (yet?)</p>
+        <Link href={"/works"}>
+          <Button
+            size="lg"
+            className="mt-10 mx-auto flex gap-2 items-center justify-center"
+          >
+            <ArrowLeft />
+            Go back to my works
+          </Button>
+        </Link>
+      </div>
+    );
 
   const { default: Content } = await import(`@/projects/${project.slug}.mdx`);
 
