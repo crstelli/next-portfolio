@@ -20,6 +20,7 @@ import { Gallery } from "@/components/gallery/Gallery";
 import { GalleryImage } from "@/components/gallery/GalleryImage";
 import Image from "next/image";
 import { TechStack } from "@/components/TechStack";
+import { links } from "@/data/links";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -37,12 +38,13 @@ export async function generateMetadata({ params }: Props) {
   }
 
   return {
-    title: `${project.name} | Projects`,
+    title: `${project.name}`,
     description: project.description,
+    metadataBase: new URL(links.portfolio),
     openGraph: {
       title: project.name,
       description: project.description,
-      images: project.images[0] ? [project.images[0]] : [],
+      images: [...project.images],
     },
   };
 }
