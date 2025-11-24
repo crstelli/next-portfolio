@@ -3,6 +3,7 @@ import { Subtitle } from "@/components/Subtitle";
 import { Title } from "@/components/Title";
 import { projects } from "@/data/projects";
 import {
+  ArrowLeft,
   Calendar,
   Clock,
   GitHub,
@@ -53,7 +54,12 @@ export default async function page({ params }: Props) {
 
   return (
     <main className="min-h-screen max-w-screen lg:mt-5">
-      <Section>
+      <Section className="relative">
+        <Link href={"/works"}>
+          <Button className="absolute top-8 flex items-center gap-2 left-0">
+            <ArrowLeft /> Works
+          </Button>
+        </Link>
         <Title>{project.name}</Title>
         <Subtitle>{project.description}</Subtitle>
         <Gallery>
