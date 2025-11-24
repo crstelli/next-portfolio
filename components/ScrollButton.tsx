@@ -9,7 +9,7 @@ function ScrollButton() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 100);
+      setIsVisible(window.scrollY > 200);
     };
 
     window.addEventListener("scroll", handleScroll);

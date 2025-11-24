@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <main className="max-sm:mt-30 mt-20">
+    <main>
       <Section>
         <Title>Contact</Title>
         <Subtitle>

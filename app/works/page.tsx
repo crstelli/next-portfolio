@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <main className="max-w-screen min-h-screen max-sm:mt-30 mt-20">
+    <main className="max-w-screen min-h-screen">
       <Section>
         <Title>Explore My Works</Title>
         <Subtitle>

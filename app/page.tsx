@@ -1,5 +1,6 @@
 import { Button } from "@/components/Button";
 import { ContactInfo } from "@/components/ContactInfo";
+import { ScrollBottomChevron } from "@/components/ScrollBottomChevron";
 import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
 import { TechStackCard } from "@/components/TechStackCard";
@@ -11,7 +12,7 @@ import { techStack } from "@/data/techstack";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, Download, GitHub, Navigation, User } from "react-feather";
+import { Download, GitHub, Navigation, User } from "react-feather";
 
 export const metadata: Metadata = {
   title: {
@@ -29,10 +30,7 @@ export default function page() {
       <main className="h-full w-full flex flex-col items-center justify-center">
         <div className="w-full h-screen bg-grid absolute top-0 left-0 -z-1"></div>
         <Section className="flex flex-col max-lg:mt-20 lg:grid h-screen items-center grid-cols-2">
-          <ChevronDown
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 chevron-down"
-            size={50}
-          />
+          <ScrollBottomChevron section="works" />
           <div className="flex flex-col gap-2 mx-auto max-lg:max-w-[600px]">
             <span className="uppercase self-start bg-primary text-black px-4 rounded-full">
               Web Developer
@@ -65,7 +63,7 @@ export default function page() {
           <div className="absolute top-40 right-20 w-[400px] h-[400px] bg-primary/10 lg:bg-primary/20 blur-[120px] rounded-full"></div>
         </Section>
       </main>
-      <Section>
+      <Section id="works">
         <Title>My Works</Title>
         <Subtitle>
           I showcase a selection of my most significant projects, with a focus
@@ -94,7 +92,7 @@ export default function page() {
           ))}
         </div>
       </Section>
-      <Section className="mt-20">
+      <Section>
         <Title>Tech Stack</Title>
         <Subtitle>
           The tools I use daily to design and develop robust, high-performance,
@@ -112,7 +110,7 @@ export default function page() {
           ))}
         </div>
       </Section>
-      <Section className="mt-20">
+      <Section>
         <Title>About Me</Title>
         <Subtitle>
           Learn more about me, my skills, and my approach to creating impactful
@@ -159,7 +157,7 @@ export default function page() {
           </div>
         </div>
       </Section>
-      <Section className="mt-20 flex flex-col">
+      <Section className="flex flex-col">
         <Title>Contact me</Title>
         <Subtitle>
           Get in touch to discuss projects, collaborations, or opportunities.

@@ -24,9 +24,9 @@ interface Props {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
+    <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <body className="w-full bg-black text-gray-300">
-        <div className="min-h-screen w-full relative justify-items-center flex flex-col">
+        <div className="min-h-screen w-full justify-items-center flex flex-col">
           <Toaster />
           <ClickSound />
           <Navbar />
