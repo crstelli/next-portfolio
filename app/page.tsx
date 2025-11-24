@@ -29,9 +29,9 @@ export default function page() {
     <>
       <main className="h-full w-full flex flex-col items-center justify-center">
         <div className="w-full h-screen bg-grid absolute top-0 left-0 -z-1"></div>
-        <Section className="flex flex-col max-lg:mt-20 lg:grid h-screen items-center grid-cols-2">
+        <Section className="flex flex-col p-0! max-lg:w-[90%] justify-center lg:grid h-screen items-center grid-cols-2">
           <ScrollBottomChevron section="works" />
-          <div className="flex flex-col gap-2 mx-auto max-lg:max-w-[600px]">
+          <div className="flex flex-col gap-2 max-lg:max-w-[600px]">
             <span className="uppercase self-start bg-primary text-black px-4 rounded-full">
               Web Developer
             </span>

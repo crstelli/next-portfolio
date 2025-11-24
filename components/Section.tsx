@@ -10,7 +10,7 @@ function Section({ children, className, id }: Props) {
   return (
     <section
       id={id}
-      className={`w-full max-w-[1200px] mx-auto px-6 pt-25 pb-5 max-sm:py-35 ${className}`}
+      className={`w-[95%] max-w-[1200px] mx-auto max-sm:pt-30 py-25 ${className}`}
     >
       {children}
     </section>

@@ -74,37 +74,9 @@ export default async function page({ params }: Props) {
           ))}
         </Gallery>
       </Section>
-      <Section className="grid grid-cols-1 min-[940px]:grid-cols-2 min-[1050px]:grid-cols-[5fr_4fr] min-[1150px]:grid-cols-[3fr_2fr] grid-rows-[auto_auto_1fr] gap-8">
+      <Section className="grid pt-0! grid-cols-1 min-[940px]:grid-cols-2 min-[1050px]:grid-cols-[5fr_4fr] min-[1150px]:grid-cols-[3fr_2fr] grid-rows-[auto_auto_1fr] gap-8">
         <div className="min-[940px]:max-[1050px]:col-span-2 row-span-3 p-2">
           <Content />
-          {nextProject && (
-            <div className="bg-neutral-950 mt-8 p-4 max-w-[600px] rounded-md border gap-x-4 border-neutral-900 grid grid-rows-[auto_auto_auto_auto] grid-cols-1 min-[560px]:grid-cols-[auto_auto]">
-              <h5 className="text-neutral-500 uppercase text-sm min-[560px]:col-span-2">
-                Next project
-              </h5>
-              <h4 className="text-xl text-white font-bold">
-                {nextProject.name}
-              </h4>
-              <div className="relative max-[560px]:order-1 max-[560px]:mt-4 row-span-3 my-auto w-[200px] aspect-video rounded-md overflow-hidden">
-                <Image
-                  src={nextProject.images[0]}
-                  alt={`Preview image of ${nextProject.name}.`}
-                  fill
-                />
-              </div>
-              <p className="text-sm mt-2 text-neutral-400">
-                {nextProject.description}
-              </p>
-              <Link
-                href={`/works/${nextProject.slug}`}
-                className="self-end mt-4 max-[560px]:order-1"
-              >
-                <Button className="flex items-center gap-2">
-                  See more <ArrowRight />
-                </Button>
-              </Link>
-            </div>
-          )}
         </div>
         <div className="bg-neutral-950 max-w-[550px] w-full mx-auto border flex flex-col items-start gap-3 self-start border-neutral-800 rounded-md p-4">
           <h5 className="self-center text-center text-xl font-bold">
@@ -162,6 +134,33 @@ export default async function page({ params }: Props) {
             />
           ))}
         </div>
+
+        {nextProject && (
+          <div className="bg-neutral-950 min-[940px]:col-span-2 max-[940px]:mx-auto mt-8 p-4 max-w-[600px] rounded-md border gap-x-4 border-neutral-900 grid grid-rows-[auto_auto_auto_auto] grid-cols-1 min-[560px]:grid-cols-[auto_auto]">
+            <h5 className="text-neutral-500 uppercase text-sm min-[560px]:col-span-2">
+              Next project
+            </h5>
+            <h4 className="text-xl text-white font-bold">{nextProject.name}</h4>
+            <div className="relative max-[560px]:order-1 max-[560px]:mt-4 row-span-3 my-auto w-[200px] aspect-video rounded-md overflow-hidden">
+              <Image
+                src={nextProject.images[0]}
+                alt={`Preview image of ${nextProject.name}.`}
+                fill
+              />
+            </div>
+            <p className="text-sm mt-2 text-neutral-400">
+              {nextProject.description}
+            </p>
+            <Link
+              href={`/works/${nextProject.slug}`}
+              className="self-end mt-4 max-[560px]:order-1"
+            >
+              <Button className="flex items-center gap-2">
+                See more <ArrowRight />
+              </Button>
+            </Link>
+          </div>
+        )}
       </Section>
     </main>
   );
