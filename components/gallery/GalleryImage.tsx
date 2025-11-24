@@ -21,7 +21,7 @@ function GalleryImage({ src, name }: ImageProps) {
               src={src}
               alt={`Image of ${name}.`}
               className="object-cover object-center rounded-md"
-              sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 400px"
+              sizes="100vw"
               fill
             />
           </div>
@@ -37,7 +37,7 @@ function GalleryImage({ src, name }: ImageProps) {
           src={src}
           alt={`Image of ${name}.`}
           className="object-cover object-center rounded-md"
-          sizes="100vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 400px"
           fill
         />
       </div>
