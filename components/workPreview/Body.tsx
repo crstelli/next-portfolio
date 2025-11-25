@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
+
+import { Globe } from "react-feather";
 import { Button } from "../Button";
-import Link from "next/link";
 
 interface Props {
   children: ReactNode;
@@ -13,9 +14,13 @@ function Body({ children, link }: Props) {
   return (
     <div className="bg-neutral-950 p-4 flex flex-col gap-2">
       {children}
-      <Link href={link} className="max-lg:mt-4 mt-auto self-start">
-        <Button>Explore</Button>
-      </Link>
+      <Button
+        href={{ ref: link, type: "Link" }}
+        className="max-lg:mt-4 mt-auto self-start"
+        icon={Globe}
+      >
+        Explore
+      </Button>
     </div>
   );
 }
