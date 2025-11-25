@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Icon } from "react-feather";
 
 interface Props {
   children: string | ReactNode;
@@ -7,12 +8,14 @@ interface Props {
   variant?: "primary" | "secondary" | "icon";
   size?: "sm" | "md" | "lg";
   className?: React.ComponentProps<"div">["className"];
+  icon?: Icon;
 }
 
 function Button({
   variant = "primary",
   size = "md",
   className,
+  icon: Icon,
   children,
   onClick,
 }: Props) {
@@ -33,8 +36,9 @@ function Button({
   return (
     <button
       onClick={onClick}
-      className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
+      className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center gap-2" : ""}`}
     >
+      {Icon && <Icon />}
       {children}
     </button>
   );

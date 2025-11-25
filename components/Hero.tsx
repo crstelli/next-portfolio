@@ -22,10 +22,7 @@ function Hero() {
         </p>
         <div className="flex items-stretch gap-4 mt-6 z-1">
           <a href={links.cv} download className="flex">
-            <Button className="flex items-center gap-2">
-              <Download />
-              Download my CV
-            </Button>
+            <Button icon={Download}>Download my CV</Button>
           </a>
           <Link target="blank" href={links.github}>
             <Button variant="icon" size="sm" className="p-2.5">
