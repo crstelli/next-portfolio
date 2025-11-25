@@ -6,15 +6,14 @@ import { Hero } from "@/components/Hero";
 import { ScrollBottomChevron } from "@/components/ScrollBottomChevron";
 import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
-import { TechStack } from "@/components/TechStack";
-import { TechStackCard } from "@/components/TechStackCard";
 import { Title } from "@/components/Title";
 import { WorksPreviews } from "@/components/workPreview/WorksPreviews";
 import { projects } from "@/data/projects";
-import { techStack } from "@/data/techstack";
+import { techstack } from "@/data/techstack";
 import { Metadata } from "next";
 import Link from "next/link";
 import { MousePointer, User } from "react-feather";
+import { TechStackGrid } from "@/components/techStack/TechStackGrid";
 
 export const metadata: Metadata = {
   title: {
@@ -33,6 +32,7 @@ export default function page() {
         <GridBackground />
         <Blob />
         <ScrollBottomChevron section="works" />
+
         <Hero />
       </main>
       <Section id="works">
@@ -53,18 +53,8 @@ export default function page() {
           and maintainable interfaces. A selection of technologies I work with
           seamlessly to build scalable and reliable projects.
         </Subtitle>
-        <TechStack>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr] justify-center gap-4 mt-10">
-            {techStack.map((ts) => (
-              <TechStackCard
-                key={ts.label}
-                image={ts.image}
-                label={ts.label}
-                content={ts.content}
-              />
-            ))}
-          </div>
-        </TechStack>
+
+        <TechStackGrid stack={techstack} />
       </Section>
       <Section>
         <Title>About Me</Title>

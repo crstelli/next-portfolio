@@ -46,8 +46,8 @@ export default function page() {
                       p.technologies.length - TECH_TAG_QUANTITY_PER_WORK;
                     if (i < TECH_TAG_QUANTITY_PER_WORK)
                       return (
-                        <WorkCard.TechnologyCard key={tech.name}>
-                          {tech.name}
+                        <WorkCard.TechnologyCard key={tech.label}>
+                          {tech.label}
                         </WorkCard.TechnologyCard>
                       );
 

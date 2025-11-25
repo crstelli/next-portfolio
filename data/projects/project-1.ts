@@ -12,69 +12,69 @@ export const project1: Project = {
     "Shoppy is a modern e-commerce platform where users can order a variety of digital and physical products, filter them by price and status, and track their orders.",
   technologies: [
     {
-      name: "Next.js",
-      icon: "/techstack-logos/nextjs.svg",
-      description: "",
+      label: "Next.js",
+      image: "/techstack-logos/nextjs.svg",
+      content: "",
     },
 
     {
-      name: "React",
-      icon: "/techstack-logos/react.svg",
-      description: "",
+      label: "React",
+      image: "/techstack-logos/react.svg",
+      content: "",
     },
 
     {
-      name: "Supabase",
-      icon: "/techstack-logos/supabase.svg",
-      description: "",
+      label: "Supabase",
+      image: "/techstack-logos/supabase.svg",
+      content: "",
     },
 
     {
-      name: "TailwindCSS",
-      icon: "/techstack-logos/tailwindcss.svg",
-      description: "",
+      label: "TailwindCSS",
+      image: "/techstack-logos/tailwindcss.svg",
+      content: "",
     },
 
     {
-      name: "Typescript",
-      icon: "/techstack-logos/typescript.svg",
-      description: "",
+      label: "Typescript",
+      image: "/techstack-logos/typescript.svg",
+      content: "",
     },
 
     {
-      name: "Vercel",
-      icon: "/techstack-logos/vercel.svg",
-      description: "",
+      label: "Vercel",
+      image: "/techstack-logos/vercel.svg",
+      content: "",
     },
 
     {
-      name: "Auth.js",
-      icon: "/techstack-logos/authjs.png",
-      description: "",
+      label: "Auth.js",
+      image: "/techstack-logos/authjs.png",
+      content: "",
     },
 
     {
-      name: "Date Fns",
-      icon: "/techstack-logos/datefns.png",
-      description: "",
+      label: "Date Fns",
+      image: "/techstack-logos/datefns.png",
+      content: "",
     },
 
     {
-      name: "Lucide React",
-      icon: "/techstack-logos/lucidereact.svg",
-      description: "",
+      label: "Lucide React",
+      image: "/techstack-logos/lucidereact.svg",
+      content: "",
     },
 
     {
-      name: "React Hot Toast",
-      icon: "/techstack-logos/reacthottoast.png",
-      description: "",
+      label: "React Hot Toast",
+      image: "/techstack-logos/reacthottoast.png",
+      content: "",
     },
 
     {
-      name: "React Range",
-      icon: "",
-      description: "",
+      label: "React Range",
+      image: "",
+      content: "",
     },
   ],
   features: ["Responsive Design", "Login with Google", "Order Tracking"],

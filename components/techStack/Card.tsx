@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useTechStack } from "./TechStack";
+import { useTechStack } from "./Provider";
 
 interface Props {
   label: string;
@@ -9,7 +9,7 @@ interface Props {
   content: string;
 }
 
-function TechStackCard({ label, image, content }: Props) {
+function Card({ label, image, content }: Props) {
   const { open, setOpen } = useTechStack();
 
   return (
@@ -48,4 +48,4 @@ function TechStackCard({ label, image, content }: Props) {
   );
 }
 
-export { TechStackCard };
+export { Card };

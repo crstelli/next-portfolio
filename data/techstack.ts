@@ -1,10 +1,10 @@
-interface TechStackItem {
+export interface TechStackItem {
   image: string;
   label: string;
   content: string;
 }
 
-export const techStack: TechStackItem[] = [
+export const techstack: TechStackItem[] = [
   {
     image: "/techstack-logos/tailwindcss.svg",
     label: "TailwindCSS",

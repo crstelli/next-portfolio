@@ -12,45 +12,45 @@ export const project3: Project = {
     "LuminaTech is a fully static, design-focused website built with Next.js and TailwindCSS, showcasing a fictional tech company through clean layouts, modern UI, and smooth responsive components.",
   technologies: [
     {
-      name: "Next.js",
-      icon: "/techstack-logos/nextjs.svg",
-      description: "",
+      label: "Next.js",
+      image: "/techstack-logos/nextjs.svg",
+      content: "",
     },
 
     {
-      name: "React",
-      icon: "/techstack-logos/react.svg",
-      description: "",
+      label: "React",
+      image: "/techstack-logos/react.svg",
+      content: "",
     },
 
     {
-      name: "TailwindCSS",
-      icon: "/techstack-logos/tailwindcss.svg",
-      description: "",
+      label: "TailwindCSS",
+      image: "/techstack-logos/tailwindcss.svg",
+      content: "",
     },
 
     {
-      name: "Typescript",
-      icon: "/techstack-logos/typescript.svg",
-      description: "",
+      label: "Typescript",
+      image: "/techstack-logos/typescript.svg",
+      content: "",
     },
 
     {
-      name: "Vercel",
-      icon: "/techstack-logos/vercel.svg",
-      description: "",
+      label: "Vercel",
+      image: "/techstack-logos/vercel.svg",
+      content: "",
     },
 
     {
-      name: "Embla Carousel",
-      icon: "/techstack-logos/emblacarousel.svg",
-      description: "",
+      label: "Embla Carousel",
+      image: "/techstack-logos/emblacarousel.svg",
+      content: "",
     },
 
     {
-      name: "Lucide React",
-      icon: "/techstack-logos/lucidereact.svg",
-      description: "",
+      label: "Lucide React",
+      image: "/techstack-logos/lucidereact.svg",
+      content: "",
     },
   ],
   features: ["Responsive Design", "Modern Carousel", "Google Maps Integration"],

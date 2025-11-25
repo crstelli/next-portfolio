@@ -1,3 +1,5 @@
+import type { TechStackItem } from "../techstack";
+
 export interface Project {
   id: number;
 
@@ -13,11 +15,7 @@ export interface Project {
   name: string;
   description: string;
 
-  technologies: {
-    icon: string;
-    name: string;
-    description: string;
-  }[];
+  technologies: TechStackItem[];
 
   github: string;
   live_view: string;

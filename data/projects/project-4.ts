@@ -12,81 +12,81 @@ export const project4: Project = {
     "A modern, responsive web platform designed for a fictional food truck brand, highlighting vibrant branding, intuitive navigation, and a smooth user experience.",
   technologies: [
     {
-      name: "Next.js",
-      icon: "/techstack-logos/nextjs.svg",
-      description: "",
+      label: "Next.js",
+      image: "/techstack-logos/nextjs.svg",
+      content: "",
     },
 
     {
-      name: "React",
-      icon: "/techstack-logos/react.svg",
-      description: "",
+      label: "React",
+      image: "/techstack-logos/react.svg",
+      content: "",
     },
 
     {
-      name: "Supabase",
-      icon: "/techstack-logos/supabase.svg",
-      description: "",
+      label: "Supabase",
+      image: "/techstack-logos/supabase.svg",
+      content: "",
     },
 
     {
-      name: "TailwindCSS",
-      icon: "/techstack-logos/tailwindcss.svg",
-      description: "",
+      label: "TailwindCSS",
+      image: "/techstack-logos/tailwindcss.svg",
+      content: "",
     },
 
     {
-      name: "Typescript",
-      icon: "/techstack-logos/typescript.svg",
-      description: "",
+      label: "Typescript",
+      image: "/techstack-logos/typescript.svg",
+      content: "",
     },
 
     {
-      name: "Vercel",
-      icon: "/techstack-logos/vercel.svg",
-      description: "",
+      label: "Vercel",
+      image: "/techstack-logos/vercel.svg",
+      content: "",
     },
 
     {
-      name: "Shadcn/ui",
-      icon: "/techstack-logos/shadcn.svg",
-      description: "",
+      label: "Shadcn/ui",
+      image: "/techstack-logos/shadcn.svg",
+      content: "",
     },
 
     {
-      name: "Lucide React",
-      icon: "/techstack-logos/lucidereact.svg",
-      description: "",
+      label: "Lucide React",
+      image: "/techstack-logos/lucidereact.svg",
+      content: "",
     },
 
     {
-      name: "React Hot Toast",
-      icon: "/techstack-logos/reacthottoast.png",
-      description: "",
+      label: "React Hot Toast",
+      image: "/techstack-logos/reacthottoast.png",
+      content: "",
     },
 
     {
-      name: "React Hook Form",
-      icon: "/techstack-logos/reacthookform.svg",
-      description: "",
+      label: "React Hook Form",
+      image: "/techstack-logos/reacthookform.svg",
+      content: "",
     },
 
     {
-      name: "Leaflet",
-      icon: "/techstack-logos/leaflet.png",
-      description: "",
+      label: "Leaflet",
+      image: "/techstack-logos/leaflet.png",
+      content: "",
     },
 
     {
-      name: "React Leaflet",
-      icon: "/techstack-logos/reactleaflet.svg",
-      description: "",
+      label: "React Leaflet",
+      image: "/techstack-logos/reactleaflet.svg",
+      content: "",
     },
 
     {
-      name: "Three.js",
-      icon: "/techstack-logos/threejs.svg",
-      description: "",
+      label: "Three.js",
+      image: "/techstack-logos/threejs.svg",
+      content: "",
     },
   ],
   features: ["Responsive Design", "Map Integration", "3D Model"],

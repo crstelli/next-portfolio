@@ -20,7 +20,7 @@ interface ContextProps {
 
 const TechStackContext = createContext<null | ContextProps>(null);
 
-function TechStack({ children }: Props) {
+function Provider({ children }: Props) {
   const [open, setOpen] = useState("");
 
   return (
@@ -38,4 +38,4 @@ function useTechStack() {
   return context;
 }
 
-export { TechStack, useTechStack };
+export { Provider, useTechStack };
