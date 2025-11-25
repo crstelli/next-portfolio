@@ -48,7 +48,7 @@ function Button({
         className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center gap-2" : ""}`}
         {...rest}
       >
-        {Icon && <Icon />}
+        {Icon && <Icon size={20} />}
         {children}
       </a>
     );
@@ -62,7 +62,7 @@ function Button({
         className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center gap-2" : ""}`}
         {...rest}
       >
-        {Icon && <Icon />}
+        {Icon && <Icon size={20} />}
         {children}
       </Link>
     );
@@ -74,7 +74,7 @@ function Button({
       className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center gap-2" : ""}`}
       {...rest}
     >
-      {Icon && <Icon />}
+      {Icon && <Icon size={20} />}
       {children}
     </button>
   );

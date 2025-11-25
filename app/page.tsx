@@ -12,8 +12,10 @@ import { projects } from "@/data/projects";
 import { techstack } from "@/data/techstack";
 import { Metadata } from "next";
 import Link from "next/link";
-import { MousePointer, User } from "react-feather";
+import { BookOpen, MousePointer, User } from "react-feather";
 import { TechStackGrid } from "@/components/techStack/TechStackGrid";
+import AboutContent from "@/data/about_intro.mdx";
+import { AboutHero } from "@/components/AboutHero";
 
 export const metadata: Metadata = {
   title: {
@@ -62,46 +64,8 @@ export default function page() {
           Learn more about me, my skills, and my approach to creating impactful
           digital experiences.
         </Subtitle>
-        <div className="flex flex-col lg:grid grid-cols-2 items-center mt-10">
-          <video
-            src="/animation.webm"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full max-w-[320px] mx-auto"
-          />
-          <div className="mt-15 flex flex-col max-lg:max-w-[600px]">
-            <span className="mt-4 flex items-center gap-3">
-              <User className="text-primary" size={30} />
-              <h3 className="text-3xl font-bold text-white">Giuseppe</h3>
-            </span>
-            <p className="mt-4 text-neutral-400">
-              Hi! I&apos;m Giuseppe, a 20-year-old self-taught{" "}
-              <span className="font-bold text-white">Frontend Developer</span>{" "}
-              with a relentless drive to{" "}
-              <span className="font-bold text-white">learn</span> and{" "}
-              <span className="font-bold text-white">grow</span>.
-              <br />
-              <br />I thrive on challenges, excel at problem-solving, and am
-              fully committed to giving my best in every project. I love working
-              in teams, stay focused on delivering results, and approach every
-              task with <span className="font-bold text-white">
-                dedication
-              </span>{" "}
-              and <span className="font-bold text-white">discipline</span>.
-              <br />
-              <br />
-              Passionate about web development, I want to contribute to
-              real-world projects and grow as a{" "}
-              <span className="font-bold text-white">Full-Stack Developer</span>
-              .
-            </p>
-            <Link href={"/about"} className="mt-4 self-end">
-              <Button>Keep reading &rarr;</Button>
-            </Link>
-          </div>
-        </div>
+
+        <AboutHero />
       </Section>
       <Section className="flex flex-col">
         <Title>Contact me</Title>
