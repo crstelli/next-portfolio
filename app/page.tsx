@@ -1,5 +1,8 @@
+import { Blob } from "@/components/Blob";
 import { Button } from "@/components/Button";
 import { ContactInfo } from "@/components/ContactInfo";
+import { GridBackground } from "@/components/GridBackground";
+import { Hero } from "@/components/Hero";
 import { ScrollBottomChevron } from "@/components/ScrollBottomChevron";
 import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
@@ -28,46 +31,11 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <main className="h-full w-full flex flex-col items-center justify-center">
-        <div className="w-full h-screen bg-grid absolute top-0 left-0 -z-1"></div>
-        <Section className="flex flex-col p-0! max-lg:w-[90%] justify-center lg:grid h-screen items-center grid-cols-2">
-          <ScrollBottomChevron section="works" />
-          <div className="flex flex-col gap-2 max-lg:max-w-[600px]">
-            <span className="uppercase self-start bg-primary text-black px-4 rounded-full">
-              Web Developer
-            </span>
-            <h1 className="text-2xl sm:text-4xl text-white font-bold">
-              Giuseppe Crescitelli
-            </h1>
-            <p className="max-sm:text-sm">
-              Front-end Developer focused on UX and performance, with experience
-              in Next.js and TypeScript. I build fast, accessible, and scalable
-              interfaces using modern technologies.
-            </p>
-            <div className="flex items-stretch gap-4 mt-6 z-1">
-              <a href={links.cv} download className="flex">
-                <Button className="flex items-center gap-2">
-                  <Download />
-                  Download my CV
-                </Button>
-              </a>
-              <Link target="blank" href={links.github}>
-                <Button variant="icon" size="sm" className="p-2.5">
-                  <GitHub size={25} />
-                </Button>
-              </Link>
-            </div>
-          </div>
-          <div className="max-lg:hidden relative justify-self-end lg:max-w-[320px] w-full aspect-square">
-            <Image
-              src="/hero.svg"
-              sizes="(max-width:1024px) 0px, 320px"
-              alt="Hero image"
-              fill
-            />
-          </div>
-          <div className="absolute top-40 right-20 w-[400px] h-[400px] bg-primary/10 lg:bg-primary/20 blur-[120px] rounded-full"></div>
-        </Section>
+      <main className="h-full w-full">
+        <GridBackground />
+        <Blob />
+        <ScrollBottomChevron section="works" />
+        <Hero />
       </main>
       <Section id="works">
         <Title>My Works</Title>
