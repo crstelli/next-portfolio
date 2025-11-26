@@ -21,39 +21,14 @@ import Image from "next/image";
 import { links } from "@/data/links";
 import { TechStackList } from "@/components/techStack/TechStackList";
 
-interface Props {
+export { generateMetadata } from "./generateMetadata";
+export { generateStaticParams } from "./generateStaticParams";
+
+export interface ParamsProps {
   params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
-
-  if (!project) {
-    return {
-      title: "Project not found",
-      description: "This project does not exist.",
-    };
-  }
-
-  return {
-    title: `${project.name}`,
-    description: project.description,
-    metadataBase: new URL(links.portfolio),
-    openGraph: {
-      title: project.name,
-      description: project.description,
-      images: [...project.images],
-    },
-  };
-}
-
-export async function generateStaticParams() {
-  const slugs = projects.map((p) => ({ slug: p.slug }));
-  return slugs;
-}
-
-export default async function page({ params }: Props) {
+export default async function page({ params }: ParamsProps) {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
 
