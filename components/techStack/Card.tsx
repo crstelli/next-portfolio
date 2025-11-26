@@ -10,11 +10,11 @@ interface Props {
 }
 
 function Card({ label, image, content }: Props) {
-  const { open, setOpen } = useTechStack();
+  const { open, handleClick } = useTechStack();
 
   return (
     <div
-      onClick={() => setOpen(label)}
+      onClick={() => handleClick(label)}
       className={`group min-h-[50px] relative duration-150 overflow-hidden border-neutral-900 hover:scale-105 border p-2 rounded-md grid grid-cols-[auto_1fr] items-center bg-neutral-950 ${content ? "cursor-pointer" : ""}`}
     >
       <div
