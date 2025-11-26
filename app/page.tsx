@@ -11,10 +11,8 @@ import { WorksPreviews } from "@/components/workPreview/WorksPreviews";
 import { projects } from "@/data/projects";
 import { techstack } from "@/data/techstack";
 import { Metadata } from "next";
-import Link from "next/link";
-import { BookOpen, MousePointer, User } from "react-feather";
+import { MousePointer } from "react-feather";
 import { TechStackGrid } from "@/components/techStack/TechStackGrid";
-import AboutContent from "@/data/about_intro.mdx";
 import { AboutHero } from "@/components/AboutHero";
 
 export const metadata: Metadata = {
@@ -72,15 +70,15 @@ export default function page() {
         <Subtitle>
           Get in touch to discuss projects, collaborations, or opportunities.
         </Subtitle>
-        <Link
-          href={"/contact"}
-          className="self-center hover:scale-120 duration-150 mt-15"
+        <Button
+          href={{ ref: "/contact", type: "Link" }}
+          variant="special"
+          icon={MousePointer}
+          className="self-center mt-15"
+          size="lg"
         >
-          <button className="glowing-border bg-primary text-black hover:bg-neutral-950 hover:text-primary px-5 py-2.5 uppercase flex items-center gap-3 cursor-pointer text-xl">
-            <MousePointer />
-            Get in touch
-          </button>
-        </Link>
+          Get in touch
+        </Button>
         <ContactInfo />
       </Section>
     </>
