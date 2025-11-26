@@ -15,11 +15,7 @@
     linear-gradient(90deg, rgba(31, 31, 31, 0.3) 1px, transparent 1px);
   background-size: 25px 25px;
 
-  -webkit-mask-image: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0)
-  );
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   mask-image: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 

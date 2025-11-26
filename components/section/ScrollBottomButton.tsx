@@ -1,5 +1,3 @@
-"use client";
-
 import { ChevronDown } from "react-feather";
 
 interface Props {
