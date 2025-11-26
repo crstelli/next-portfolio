@@ -4,7 +4,6 @@ import { Title } from "@/components/Title";
 import { WorkCard } from "@/components/workCard/WorkCard";
 
 import { projects } from "@/data/projects";
-import { TECH_TAG_QUANTITY_PER_WORK } from "@/lib/constants";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <main className="max-w-screen min-h-screen">
+    <main className="min-h-screen">
       <Section>
         <Title>Explore My Works</Title>
         <Subtitle>
@@ -40,31 +39,8 @@ export default function page() {
                 <WorkCard.Header tag={p.stack} year={p.date.year} />
                 <WorkCard.Title>{p.name}</WorkCard.Title>
                 <WorkCard.Description>{p.description}</WorkCard.Description>
-                <WorkCard.TagsContainer>
-                  {p.technologies.map((tech, i) => {
-                    const othersCount =
-                      p.technologies.length - TECH_TAG_QUANTITY_PER_WORK;
-                    if (i < TECH_TAG_QUANTITY_PER_WORK)
-                      return (
-                        <WorkCard.TechnologyCard key={tech.label}>
-                          {tech.label}
-                        </WorkCard.TechnologyCard>
-                      );
-
-                    if (i === p.technologies.length - 1)
-                      return (
-                        <WorkCard.PlusCard
-                          key={"others"}
-                          quantity={othersCount}
-                        />
-                      );
-                  })}
-                </WorkCard.TagsContainer>
-                <WorkCard.FeaturesContainer>
-                  {p.features.map((f) => (
-                    <WorkCard.Feature key={f}>{f}</WorkCard.Feature>
-                  ))}
-                </WorkCard.FeaturesContainer>
+                <WorkCard.Tags stack={p.technologies} />
+                <WorkCard.Features features={p.features} />
                 <WorkCard.Buttons
                   page={p.slug}
                   github={p.github}

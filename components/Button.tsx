@@ -54,7 +54,7 @@ function Button({
       <a
         href={href.ref}
         onClick={onClick}
-        className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center gap-2" : ""}`}
+        className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center justify-center gap-2" : ""}`}
         {...rest}
       >
         {Icon && <Icon size={iconSizes[size]} />}
@@ -80,7 +80,7 @@ function Button({
       <Link
         href={href.ref}
         onClick={onClick}
-        className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center gap-2" : ""}`}
+        className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center justify-center gap-2" : ""}`}
         {...rest}
       >
         {Icon && <Icon size={iconSizes[size]} />}
@@ -92,7 +92,7 @@ function Button({
   return (
     <button
       onClick={onClick}
-      className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center gap-2" : ""}`}
+      className={`${base} ${variants[variant]} ${sizes[size]} ${className} ${Icon ? "flex items-center justify-center gap-2" : ""}`}
       {...rest}
     >
       {Icon && <Icon size={iconSizes[size]} />}

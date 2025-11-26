@@ -4,12 +4,9 @@ import { Body } from "./Body";
 import { Header } from "./Header";
 import { Title } from "./Title";
 import { Description } from "./Description";
-import { TagsContainer } from "./TagsContainer";
-import { TechnologyTag } from "./TechnologyTag";
-import { FeaturesContainer } from "./FeaturesContainer";
-import { Feature } from "./Feature";
-import { PlusCard } from "./PlusCard";
 import { Buttons } from "./Buttons";
+import { Tags } from "./Tags";
+import { Features } from "./Features";
 
 interface Props {
   children: ReactNode;
@@ -28,11 +25,8 @@ WorkCard.Body = Body;
 WorkCard.Header = Header;
 WorkCard.Title = Title;
 WorkCard.Description = Description;
-WorkCard.TagsContainer = TagsContainer;
-WorkCard.TechnologyCard = TechnologyTag;
-WorkCard.PlusCard = PlusCard;
-WorkCard.FeaturesContainer = FeaturesContainer;
-WorkCard.Feature = Feature;
+WorkCard.Tags = Tags;
 WorkCard.Buttons = Buttons;
+WorkCard.Features = Features;
 
 export { WorkCard };
