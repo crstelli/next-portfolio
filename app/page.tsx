@@ -48,7 +48,7 @@ export default function page() {
 
         <WorksPreviews projects={projects} />
       </Section>
-      <Section>
+      <Section id="techstack">
         <Title>Tech Stack</Title>
         <Subtitle>
           The tools I use daily to design and develop robust, high-performance, and maintainable interfaces. A selection

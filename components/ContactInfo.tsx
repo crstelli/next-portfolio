@@ -4,7 +4,7 @@ import { links } from "@/data/links";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
-import { GitHub, Linkedin, Mail, MapPin, Send, Target } from "react-feather";
+import { GitHub, Linkedin, Mail, MapPin, Send } from "react-feather";
 import { Button } from "./Button";
 import { FormData } from "./EmailTemplate";
 
