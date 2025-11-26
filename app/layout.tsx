@@ -27,7 +27,7 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} scroll-smooth`}>
       <body className="w-full bg-black text-gray-300">
-        <div className="min-h-screen w-full justify-items-center flex flex-col">
+        <div className="min-h-screen w-full max-sm:mt-20 justify-items-center flex flex-col">
           <Toaster
             toastOptions={{
               className: "toast",

@@ -25,7 +25,7 @@ export default function page() {
           If you&apos;re interested in collaborating or discussing new opportunities, I&apos;d be glad to hear from you.
         </Subtitle>
 
-        <h1 className="text-center mt-15 mb-10 text-3xl font-bold">
+        <h1 className="text-center my-20 text-3xl font-bold">
           Ready to build
           <br />
           <span className="text-6xl text-primary">something great?</span>
