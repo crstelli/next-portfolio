@@ -1,13 +1,13 @@
 import "@/app/globals.css";
+import type { Metadata } from "next";
+
+import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 import { ClickSound } from "@/components/ClickSound";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/navbar/Navbar";
 import { ScrollButton } from "@/components/ScrollButton";
-import type { Metadata } from "next";
-
-import { Inter } from "next/font/google";
-import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 

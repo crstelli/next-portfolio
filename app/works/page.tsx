@@ -1,10 +1,11 @@
+import type { Metadata } from "next";
+import { projects } from "@/data/projects";
+
 import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
 import { Title } from "@/components/Title";
-import { WorkCard } from "@/components/workCard/WorkCard";
 
-import { projects } from "@/data/projects";
-import { Metadata } from "next";
+import { WorkCard } from "@/components/workCard/WorkCard";
 
 export const metadata: Metadata = {
   title: "Works",

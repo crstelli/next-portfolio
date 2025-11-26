@@ -1,14 +1,16 @@
+import { notFound } from "next/navigation";
+import { projects } from "@/data/projects";
+
 import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
 import { Title } from "@/components/Title";
-import { projects } from "@/data/projects";
-import { ArrowLeft } from "react-feather";
 import { Button } from "@/components/Button";
-import { Gallery } from "@/components/gallery/Gallery";
-import { notFound } from "next/navigation";
 import { WorkInfoCard } from "@/components/WorkInfoCard";
 import { StackInfoCard } from "@/components/StackInfoCard";
 import { NextProjectCard } from "@/components/NextProjectCard";
+
+import { Gallery } from "@/components/gallery/Gallery";
+import { ArrowLeft } from "react-feather";
 
 export { generateMetadata } from "./generateMetadata";
 export { generateStaticParams } from "./generateStaticParams";

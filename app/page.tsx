@@ -1,3 +1,8 @@
+import type { Metadata } from "next";
+
+import { projects } from "@/data/projects";
+import { techstack } from "@/data/techstack";
+
 import { Blob } from "@/components/Blob";
 import { Button } from "@/components/Button";
 import { ContactInfo } from "@/components/ContactInfo";
@@ -7,13 +12,12 @@ import { ScrollBottomChevron } from "@/components/ScrollBottomChevron";
 import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
 import { Title } from "@/components/Title";
-import { WorksPreviews } from "@/components/workPreview/WorksPreviews";
-import { projects } from "@/data/projects";
-import { techstack } from "@/data/techstack";
-import { Metadata } from "next";
-import { MousePointer } from "react-feather";
-import { TechStackGrid } from "@/components/techStack/TechStackGrid";
 import { AboutHero } from "@/components/AboutHero";
+
+import { WorksPreviews } from "@/components/workPreview/WorksPreviews";
+import { TechStackGrid } from "@/components/techStack/TechStackGrid";
+
+import { MousePointer } from "react-feather";
 
 export const metadata: Metadata = {
   title: {
