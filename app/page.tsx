@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { projects } from "@/data/projects";
 import { techstack } from "@/data/techstack";
 
+import { AboutHero } from "@/components/AboutHero";
 import { Blob } from "@/components/Blob";
 import { Button } from "@/components/Button";
 import { ContactInfo } from "@/components/ContactInfo";
@@ -12,12 +13,11 @@ import { ScrollBottomChevron } from "@/components/ScrollBottomChevron";
 import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
 import { Title } from "@/components/Title";
-import { AboutHero } from "@/components/AboutHero";
 
-import { WorksPreviews } from "@/components/workPreview/WorksPreviews";
 import { TechStackGrid } from "@/components/techStack/TechStackGrid";
+import { WorksPreviews } from "@/components/workPreview/WorksPreviews";
 
-import { MousePointer } from "react-feather";
+import { Send } from "react-feather";
 
 export const metadata: Metadata = {
   title: {
@@ -77,7 +77,7 @@ export default function page() {
         <Button
           href={{ ref: "/contact", type: "Link" }}
           variant="special"
-          icon={MousePointer}
+          icon={Send}
           className="self-center mt-15"
           size="lg"
         >

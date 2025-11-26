@@ -2,15 +2,13 @@ import { Section } from "@/components/Section";
 import { Subtitle } from "@/components/Subtitle";
 import { Title } from "@/components/Title";
 
-import Content from "./content.mdx";
 import { Button } from "@/components/Button";
-import Link from "next/link";
-import { GitHub, Linkedin, MousePointer } from "react-feather";
-import { links } from "@/data/links";
-import { Metadata } from "next";
-import Image from "next/image";
-import { ProfileCard } from "@/components/ProfileCard";
 import { Highlight } from "@/components/Highlight";
+import { ProfileCard } from "@/components/ProfileCard";
+import { Metadata } from "next";
+
+import { Send } from "react-feather";
+import Content from "./content.mdx";
 
 export const metadata: Metadata = {
   title: "About",
@@ -42,12 +40,14 @@ export default function page() {
           <ProfileCard />
           <div className="max-[900px]:order-1">
             <Content />
-            <Link href={"/contact"}>
-              <Button className="mt-4 flex items-center gap-2" size="lg">
-                <MousePointer />
-                Get in Touch
-              </Button>
-            </Link>
+            <Button
+              href={{ ref: "/contact", type: "Link" }}
+              className="mt-8"
+              icon={Send}
+              size="lg"
+            >
+              Get in Touch
+            </Button>
           </div>
         </div>
       </Section>

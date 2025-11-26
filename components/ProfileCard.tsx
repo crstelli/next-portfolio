@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { GitHub, Linkedin, MousePointer } from "react-feather";
+import { GitHub, Linkedin, Send } from "react-feather";
 import { Button } from "./Button";
 import { links } from "@/data/links";
 import { Highlight } from "./Highlight";
@@ -32,7 +32,7 @@ function ProfileCard() {
         <Button
           href={{ ref: "/contact", type: "Link" }}
           className="mt-10"
-          icon={MousePointer}
+          icon={Send}
           size="lg"
         >
           Get in Touch
