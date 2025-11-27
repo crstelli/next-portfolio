@@ -1,3 +1,6 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/crstelli/portfolio)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/crstelli/portfolio)
+
 # Portfolio
 
 This is my personal portfolio built with Next.js, TypeScript, and MDX. It showcases my projects, skills, and experience as a frontend developer. The site features a clean, responsive design, interactive components, and a focus on performance and accessibility. It serves as a hands-on demonstration of my abilities in modern web development.
