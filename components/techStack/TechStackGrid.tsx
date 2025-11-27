@@ -33,6 +33,7 @@ function TechStackGrid({ stack }: Props) {
         initial="hidden"
         whileInView="show"
         variants={container}
+        viewport={{ margin: "100px", once: true }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-[1fr] justify-center gap-4 mt-10"
       >
         {stack.map((ts) => (

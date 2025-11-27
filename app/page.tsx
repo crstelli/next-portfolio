@@ -40,8 +40,8 @@ export default function page() {
         <Hero />
       </main>
       <Section id="works">
-        <Title>My Works</Title>
-        <Subtitle>
+        <Title vpMargin={100}>My Works</Title>
+        <Subtitle vpMargin={100}>
           I showcase a selection of my most significant projects, with a focus on performance, UX, and code quality.
           Each project includes a dedicated page detailing technical aspects, design choices, and tangible results.
         </Subtitle>
@@ -49,8 +49,8 @@ export default function page() {
         <WorksPreviews projects={projects} />
       </Section>
       <Section id="techstack">
-        <Title>Tech Stack</Title>
-        <Subtitle>
+        <Title vpMargin={100}>Tech Stack</Title>
+        <Subtitle vpMargin={100}>
           The tools I use daily to design and develop robust, high-performance, and maintainable interfaces. A selection
           of technologies I work with seamlessly to build scalable and reliable projects.
         </Subtitle>
@@ -58,14 +58,16 @@ export default function page() {
         <TechStackGrid stack={techstack} />
       </Section>
       <Section>
-        <Title>About Me</Title>
-        <Subtitle>Learn more about me, my skills, and my approach to creating impactful digital experiences.</Subtitle>
+        <Title vpMargin={100}>About Me</Title>
+        <Subtitle vpMargin={100}>
+          Learn more about me, my skills, and my approach to creating impactful digital experiences.
+        </Subtitle>
 
         <AboutHero />
       </Section>
       <Section className="flex flex-col">
-        <Title>Contact me</Title>
-        <Subtitle>Get in touch to discuss projects, collaborations, or opportunities.</Subtitle>
+        <Title vpMargin={100}>Contact me</Title>
+        <Subtitle vpMargin={100}>Get in touch to discuss projects, collaborations, or opportunities.</Subtitle>
         <Button
           href={{ ref: "/contact", type: "Link" }}
           variant="special"
