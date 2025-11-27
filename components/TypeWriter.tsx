@@ -8,7 +8,7 @@ interface Props {
 
 const parentVariants = {
   show: {
-    transition: { staggerChildren: 0.025 },
+    transition: { staggerChildren: 0.02 },
   },
 };
 
