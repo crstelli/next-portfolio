@@ -9,11 +9,12 @@ interface Props {
   content: string;
 }
 
-function Card({ label, image, content }: Props) {
+function Card({ label, image, content, ...props }: Props) {
   const { open, handleClick } = useTechStack();
 
   return (
     <div
+      {...props}
       onClick={() => handleClick(label)}
       className={`group min-h-[50px] relative duration-150 overflow-hidden border-border hover:scale-105 border p-2 rounded-md grid grid-cols-[auto_1fr] items-center bg-neutral-950 ${content ? "cursor-pointer" : ""}`}
     >
