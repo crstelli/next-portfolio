@@ -1,3 +1,5 @@
+![Banner](images/banner.png)
+
 ![GitHub last commit](https://img.shields.io/github/last-commit/crstelli/portfolio)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/crstelli/portfolio)
 
