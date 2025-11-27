@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+This is my personal portfolio built with Next.js, TypeScript, and MDX. It showcases my projects, skills, and experience as a frontend developer. The site features a clean, responsive design, interactive components, and a focus on performance and accessibility. It serves as a hands-on demonstration of my abilities in modern web development.
 
-First, run the development server:
+## Images
+
+![Home Page](./images/image-1.png)
+![Tech Stack](./images/image-2.png)
+
+### Works Page
+
+![Works Page](./images/image-3.png)
+![Work Page](./images/image-4.png)
+
+### About Page
+
+![About Page](./images/image-5.png)
+
+### Contact Page
+
+![Contact Page](./images/image-6.png)
+
+### Responsive Design
+
+![Contact Page](./images/image-7.png)
+
+## Tech Stack
+
+- React 19.2
+- Next.js 16.0.5
+- TailwindCSS 4.1
+- TypeScript
+- React Feather
+- react-hot-toast
+- react-hook-form
+- MDX
+- React Email
+- Resend
+- TsParticles
+- Frame Motion
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/crstelli/portfolio
+```
+
+2. Navigate into project folder
+
+```bash
+cd portfolio
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open your browser and navigate to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+You need to configure environment variables for the app to work correctly.
+Create a `.env` file in the project root and add:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+RESEND_API_KEY=Your Resend API Key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Responsive Design
+- Animation with Framer Motion
+- Particles Background with TsParticles
+- Complete Tech Stack Descrition
+- Contact Form
+- Specific Work page for each project
+- Complete About Page with all information
 
-## Deploy on Vercel
+## Future Improvements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Specific pages for each technology I use
+- Testimonials section
+- Blog
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+
+Giuseppe - [LinkedIn](https://linkedin.com/in/giuseppecrescitelli) - [Portfolio](https://crescitelli.dev)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
