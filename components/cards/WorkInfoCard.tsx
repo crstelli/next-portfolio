@@ -25,7 +25,7 @@ function WorkInfoCard({ project }: Props) {
       </Button>
 
       <Button
-        href={{ ref: project.github, type: "a" }}
+        href={{ ref: project.live_view, type: "a" }}
         target="blank"
         className="w-full"
         icon={Radio}
